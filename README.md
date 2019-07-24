@@ -7,6 +7,7 @@ pré-requis:
  - discord.js
  - Créer un bot sur https://discordapp.com/developers/applications/
       - l'appeler: R6Sbot Votemap
+      - Lui mettre l'image logo 1.png
  - Mettre le token de connexion de son bot dans la ligne 3 de index.js
  - tester
  - profiter !
