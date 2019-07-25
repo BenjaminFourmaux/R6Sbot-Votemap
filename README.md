@@ -13,7 +13,7 @@ pré-requis:
  - profiter !
 
 # Comment fair un ban des maps:
-Si vous souhaitez obtenire de l'aide (commandes ...) entré " !vote help" dans un salon text sur lequel le bot a accés.
+Si vous souhaitez obtenir de l'aide (commandes ...) entrer " !vote help" dans un salon text sur lequel le bot a accés.
 
 Pour faire un vote des maps pour des tournois et matchs Rainbow Six Siege (PC, PS4 et Xbox).
 
@@ -27,4 +27,4 @@ Pour faire un vote des maps pour des tournois et matchs Rainbow Six Siege (PC, P
 
 
 
-copyright Benjamin Fourmaux -- Beruet   Twitter: [@BFourmaux](https://www.twitter.com/BFourmaux)
+copyright Benjamin Fourmaux -- Beruet      Twitter: [@BFourmaux](https://www.twitter.com/BFourmaux)
