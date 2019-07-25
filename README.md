@@ -12,7 +12,7 @@ pré-requis:
  - tester
  - profiter !
 
-# Comment fair un ban des maps:
+# Comment faire un ban des maps:
 Si vous souhaitez obtenir de l'aide (commandes ...) entrer " !vote help" dans un salon text sur lequel le bot a accés.
 
 Pour faire un vote des maps pour des tournois et matchs Rainbow Six Siege (PC, PS4 et Xbox).
