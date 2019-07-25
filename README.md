@@ -14,4 +14,5 @@ pré-requis:
 
 
 # Note de versions:
-Beta 1.0: Première version fonctionnel du bot. Pour Rainbow Six Siege Y4 S2
+Beta 1.0 : Première version fonctionnel du bot. Pour Rainbow Six Siege Y4 S2 et ESL rules Y4 S2.
+Beta 1.1 : Optimisation du code de la beta 1.0 en rajoutant des variables (map) a fin de facilité l'ajout, le retrait des maps en fonction des règles ESL.
