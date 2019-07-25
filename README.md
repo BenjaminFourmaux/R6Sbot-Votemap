@@ -24,6 +24,7 @@ Pour faire un vote des maps pour des tournois et matchs Rainbow Six Siege (PC, P
 # Note de versions:
 - Beta 1.0 : Première version fonctionnelle du Bot. Pour Rainbow Six Siege Y4 S2 et ESL rules Y4 S2.
 - Beta 1.1 : Optimisation du code de la beta 1.0 en rajoutant des variables (map) afin de faciliter l'ajout, le retrait des maps en fonction des règles ESL.
+- Beta 1.2 : Correction de fautes d'orthographe + ajout de "Comment faire un vote de maps" dans l'aide (!vote help)
 
 
 
