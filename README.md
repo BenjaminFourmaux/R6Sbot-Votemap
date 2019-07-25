@@ -11,3 +11,7 @@ pré-requis:
  - Mettre le token de connexion de son bot dans la ligne 3 de index.js
  - tester
  - profiter !
+
+
+# Note de versions:
+Beta 1.0: Première version fonctionnel du bot. Pour Rainbow Six Siege Y4 S2
