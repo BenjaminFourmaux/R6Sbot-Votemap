@@ -1,11 +1,16 @@
+console.log('Connexion à discord.api en cours...')
 const Discord = require('discord.js')
 const bot = new Discord.Client()
 bot.login('Insert your token') // token de connexion
 
-version = '1.3'; // Version du script
+version = '1.4'; // Version du script
 
 
 bot.on('ready', function (){
+	d = new Date();
+	  heureDate(d);
+	  
+	console.log('['+ dformat +']'+ 'Le Bot a démarré')
 	bot.user.setGame('Fait les vetomaps (!vote help)').catch(console.error)
 })
 
@@ -65,7 +70,7 @@ bot.on('message', function (message){
 	  d = new Date();
 	  heureDate(d);
 	  
-	  console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"list"','\x1b[32m',' exécuté')
+	  console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"list"','\x1b[32m',' exécuté','\x1b[0m')
 	}
  
   
@@ -77,7 +82,8 @@ bot.on('message', function (message){
 			d = new Date();
 			heureDate(d);
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"start"','\x1b[32m',' exécuté')
+			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"start"','\x1b[32m',' exécuté','\x1b[0m')
+			console.log('['+ dformat +']'+ '\x1b[31m','Session:','\x1b[37m','"Ban"','\x1b[32m',' lancé','\x1b[0m')
   }
  
  // bannisement n°1
@@ -146,7 +152,7 @@ bot.on('message', function (message){
 			d = new Date();
 			heureDate(d);
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 1"','\x1b[32m',' exécuté')
+			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 1"','\x1b[32m',' exécuté','\x1b[0m')
  }
 	
  // bannisement n°2
@@ -215,7 +221,7 @@ bot.on('message', function (message){
 			d = new Date();
 			heureDate(d);
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 2"','\x1b[32m',' exécuté')
+			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 2"','\x1b[32m',' exécuté','\x1b[0m')
  }	
  
   // bannisement n°3
@@ -284,7 +290,7 @@ bot.on('message', function (message){
 			d = new Date();
 			heureDate(d);
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"bna 3"','\x1b[32m',' exécuté')
+			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"bna 3"','\x1b[32m',' exécuté','\x1b[0m')
  }
  
   // bannisement n°4
@@ -353,7 +359,7 @@ bot.on('message', function (message){
 			d = new Date();
 			heureDate(d);
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 4"','\x1b[32m',' exécuté')
+			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 4"','\x1b[32m',' exécuté','\x1b[0m')
  }
  
    // bannisement n°5
@@ -422,7 +428,7 @@ bot.on('message', function (message){
 			d = new Date();
 			heureDate(d);
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 5"','\x1b[32m',' exécuté')
+			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 5"','\x1b[32m',' exécuté','\x1b[0m')
  }
  
   // bannisement n°6
@@ -491,7 +497,7 @@ bot.on('message', function (message){
 			d = new Date();
 			heureDate(d);
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 6"','\x1b[32m',' exécuté')
+			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 6"','\x1b[32m',' exécuté','\x1b[0m')
  }
  
   // bannisement n°7
@@ -560,7 +566,7 @@ bot.on('message', function (message){
 			d = new Date();
 			heureDate(d);
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 7"','\x1b[32m',' exécuté')
+			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 7"','\x1b[32m',' exécuté','\x1b[0m')
  }
   
 	// Stop ban des maps + réinitialisation variables ban
@@ -578,13 +584,14 @@ bot.on('message', function (message){
 				d = new Date();
 				heureDate(d);
 	  
-				console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"stop"','\x1b[32m',' exécuté')
+				console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"stop"','\x1b[32m',' exécuté','\x1b[0m')
+				console.log('['+ dformat +']'+ '\x1b[31m','Session:','\x1b[37m','"Ban"','\x1b[32m',' stopé','\x1b[0m')
 	}
 
 	// Help
 	if (message.content === '!vote help') {
 			message.channel.send('R6Sbot Votemap V: beta' + version)
-			message.channel.send('Comment faire un vote de map -> https://tinyurl.com/r6sbot-votemap-comment-faire')
+			message.channel.send('Comment faire un vote de map -> <https://tinyurl.com/r6sbot-votemap-comment-faire>')
 			message.channel.send('Voici la liste des commandes:')
 			message.channel.send('Pour les commandes de ce bot TOUJOURS commencer par : !vote .')
 			message.channel.send('- Aide: !vote help')
@@ -593,13 +600,13 @@ bot.on('message', function (message){
 			message.channel.send('- Bannir une map: !vote ban [numéro de la map]')
 			message.channel.send('- Arrêter un vote: !vote stop')
 			message.channel.send(' ')
-			message.channel.send('Go follow https://www.twitter.com/Benwarrior37')
+			message.channel.send('Go follow <https://www.twitter.com/Benwarrior37>')
 			
 			// log fonctionnalité
 				d = new Date();
 				heureDate(d);
 	  
-				console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"help"','\x1b[32m',' exécuté')
+				console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"help"','\x1b[32m',' exécuté','\x1b[0m')
 	}
 })
 // fin
