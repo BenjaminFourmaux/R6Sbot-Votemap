@@ -1,8 +1,8 @@
 const Discord = require('discord.js')
 const bot = new Discord.Client()
-bot.login('Insert your Token') // token de connexion
+bot.login('Insert your token') // token de connexion
 
-
+version = '1.3'; // Version du script
 
 
 bot.on('ready', function (){
@@ -583,7 +583,7 @@ bot.on('message', function (message){
 
 	// Help
 	if (message.content === '!vote help') {
-			message.channel.send('R6Sbot Votemap V: beta 1.2')
+			message.channel.send('R6Sbot Votemap V: beta' + version)
 			message.channel.send('Comment faire un vote de map -> https://tinyurl.com/r6sbot-votemap-comment-faire')
 			message.channel.send('Voici la liste des commandes:')
 			message.channel.send('Pour les commandes de ce bot TOUJOURS commencer par : !vote .')
