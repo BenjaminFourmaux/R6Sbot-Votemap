@@ -23,7 +23,7 @@ Pour faire un vote des maps pour des tournois et matchs Rainbow Six Siege (PC, P
 
 # Notes de versions:
 - Beta 1.5 : (le futur) Ajout d'une réponse du bot si une commande (!vote) n'existe pas.
-- Beta 1.4 : (bientôt) Correction des bugs lié aux couleurs (des logs) dans la console. + Ajout d'indications dans la console (statut du bot ...).
+- Beta 1.4 : (bientôt) Correction des bugs lié aux couleurs (des logs) dans la console. + Ajout d'indications dans la console (statut du bot ...).+ Correction de l'affichage des lien dans la commande help.
 - Beta 1.3 : Ajout de la fonctionnalité de log des actions disponible dans la console. Avec des couleurs !!! + Ajout de la sécance de ban pour le ban 5. Petite erreur d'oublie de ma part.
 - Beta 1.2 : Correction de fautes d'orthographe + ajout de "Comment faire un vote de maps" dans l'aide (!vote help).
 - Beta 1.1 : Optimisation du code de la beta 1.0 en rajoutant des variables (map) afin de faciliter l'ajout, le retrait des maps en fonction des règles ESL.
