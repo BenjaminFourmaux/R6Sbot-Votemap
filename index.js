@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 bot.login('Insert your token') // token de connexion
 
-version = '1.4'; // Version du script
+version = '1.5'; // Version du script
 
 
 bot.on('ready', function (){
@@ -52,8 +52,35 @@ bot.on('ready', function (){
                d.getSeconds()].join(':');
 	 }
 	 
-
+	 
 bot.on('message', function (message){
+
+	// Vérification de la commandes
+	if (message.content.startsWith('!vote')) {
+		let args = message.content.split(' ')
+		
+		switch (args[1]){
+			case 'ban':
+				;
+			break;
+			case 'list':
+				;
+			break;
+			case 'help':
+				;
+			break;
+			case 'start':
+				;
+			break;
+			case 'stop':
+				;
+			break;
+			default:
+				message.channel.send("Cette commande n'existe pas")
+				console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m',''+ args[1] +'','\x1b[31m',' non reconnue','\x1b[0m')
+		}
+
+	}
 	
 	// liste des maps
 	if (message.content === '!vote list') {
@@ -88,6 +115,15 @@ bot.on('message', function (message){
  
  // bannisement n°1
  if (message.content === '!vote ban 1') {
+	 if (ban1===1){
+		 message.channel.send('Cette map a déjà été bannie !')
+		 
+		 // log fonctionnalité
+			d = new Date();
+			heureDate(d);
+	  
+			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 1"','\x1b[31m',' refusé','\x1b[0m')
+	 } else {
 		ban1 =1;
 		message.reply('a banni Club House')
 		
@@ -153,10 +189,20 @@ bot.on('message', function (message){
 			heureDate(d);
 	  
 			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 1"','\x1b[32m',' exécuté','\x1b[0m')
+	 }
  }
 	
  // bannisement n°2
 	if (message.content === '!vote ban 2') {
+		if (ban2===1){
+		 message.channel.send('Cette map a déjà été bannie !')
+		 
+		 // log fonctionnalité
+			d = new Date();
+			heureDate(d);
+	  
+			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 2"','\x1b[31m',' refusé','\x1b[0m')
+	 } else {
 			 ban2 =1;
 		message.reply('a banni Consulat')
 		
@@ -222,10 +268,20 @@ bot.on('message', function (message){
 			heureDate(d);
 	  
 			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 2"','\x1b[32m',' exécuté','\x1b[0m')
+	 }
  }	
  
   // bannisement n°3
 	if (message.content === '!vote ban 3') {
+		if (ban3===1){
+		 message.channel.send('Cette map a déjà été bannie !')
+		 
+		 // log fonctionnalité
+			d = new Date();
+			heureDate(d);
+	  
+			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 3"','\x1b[31m',' refusé','\x1b[0m')
+	 } else {
 			 ban3 =1;
 		message.reply('a banni Banque')
 		
@@ -291,10 +347,20 @@ bot.on('message', function (message){
 			heureDate(d);
 	  
 			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"bna 3"','\x1b[32m',' exécuté','\x1b[0m')
+	 }
  }
  
   // bannisement n°4
  if (message.content === '!vote ban 4') {
+	 if (ban4===1){
+		 message.channel.send('Cette map a déjà été bannie !')
+		 
+		 // log fonctionnalité
+			d = new Date();
+			heureDate(d);
+	  
+			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 4"','\x1b[31m',' refusé','\x1b[0m')
+	 } else {
 		ban4 =1;
 		message.reply('a banni Café Dostoyevsky')
 		
@@ -360,10 +426,20 @@ bot.on('message', function (message){
 			heureDate(d);
 	  
 			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 4"','\x1b[32m',' exécuté','\x1b[0m')
+	 }
  }
  
    // bannisement n°5
  if (message.content === '!vote ban 5') {
+	 if (ban5===1){
+		 message.channel.send('Cette map a déjà été bannie !')
+		 
+		 // log fonctionnalité
+			d = new Date();
+			heureDate(d);
+	  
+			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 5"','\x1b[31m',' refusé','\x1b[0m')
+	 } else {
 		ban5 =1;
 		message.reply('a banni Frontière')
 		
@@ -429,10 +505,20 @@ bot.on('message', function (message){
 			heureDate(d);
 	  
 			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 5"','\x1b[32m',' exécuté','\x1b[0m')
+	 }
  }
  
   // bannisement n°6
  if (message.content === '!vote ban 6') {
+	 if (ban6===1){
+		 message.channel.send('Cette map a déjà été bannie !')
+		 
+		 // log fonctionnalité
+			d = new Date();
+			heureDate(d);
+	  
+			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 6"','\x1b[31m',' refusé','\x1b[0m')
+	 } else {
 		ban6 =1;
 		message.reply('a banni Litoral')
 		
@@ -498,10 +584,20 @@ bot.on('message', function (message){
 			heureDate(d);
 	  
 			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 6"','\x1b[32m',' exécuté','\x1b[0m')
+	 }
  }
  
   // bannisement n°7
  if (message.content === '!vote ban 7') {
+	 if (ban7===1){
+		 message.channel.send('Cette map a déjà été bannie !')
+		 
+		 // log fonctionnalité
+			d = new Date();
+			heureDate(d);
+	  
+			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 7"','\x1b[31m',' refusé','\x1b[0m')
+	 } else {
 		ban7 =1;
 		message.reply('a banni Villa')
 		
@@ -567,6 +663,7 @@ bot.on('message', function (message){
 			heureDate(d);
 	  
 			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 7"','\x1b[32m',' exécuté','\x1b[0m')
+	 }
  }
   
 	// Stop ban des maps + réinitialisation variables ban
@@ -585,7 +682,7 @@ bot.on('message', function (message){
 				heureDate(d);
 	  
 				console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"stop"','\x1b[32m',' exécuté','\x1b[0m')
-				console.log('['+ dformat +']'+ '\x1b[31m','Session:','\x1b[37m','"Ban"','\x1b[32m',' stopé','\x1b[0m')
+				console.log('['+ dformat +']'+ '\x1b[31m','Session:','\x1b[37m','"Ban"','\x1b[32m',' stoppé','\x1b[0m')
 	}
 
 	// Help
@@ -599,7 +696,6 @@ bot.on('message', function (message){
 			message.channel.send('- Lancer un vote: !vote start')
 			message.channel.send('- Bannir une map: !vote ban [numéro de la map]')
 			message.channel.send('- Arrêter un vote: !vote stop')
-			message.channel.send(' ')
 			message.channel.send('Go follow <https://www.twitter.com/Benwarrior37>')
 			
 			// log fonctionnalité
