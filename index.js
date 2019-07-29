@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 bot.login('Insert your token') // token de connexion
 
-version = '1.5'; // Version du script
+version = '1.6'; // Version du script
 
 
 bot.on('ready', function (){
@@ -77,7 +77,8 @@ bot.on('message', function (message){
 			break;
 			default:
 				message.channel.send("Cette commande n'existe pas")
-				console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m',''+ args[1] +'','\x1b[31m',' non reconnue','\x1b[0m')
+					
+				console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m',''+ args[1] +'','\x1b[31m',' non reconnue','\x1b[0m')
 		}
 
 	}
@@ -96,8 +97,9 @@ bot.on('message', function (message){
 	  // log fonctionnalité
 	  d = new Date();
 	  heureDate(d);
+	  user = message.member.user.username;
 	  
-	  console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"list"','\x1b[32m',' exécuté','\x1b[0m')
+	  console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"list"','\x1b[32m',' exécuté','\x1b[0m')
 	}
  
   
@@ -108,9 +110,10 @@ bot.on('message', function (message){
 	// log fonctionnalité
 			d = new Date();
 			heureDate(d);
+			user = message.member.user.username;
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"start"','\x1b[32m',' exécuté','\x1b[0m')
-			console.log('['+ dformat +']'+ '\x1b[31m','Session:','\x1b[37m','"Ban"','\x1b[32m',' lancé','\x1b[0m')
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"start"','\x1b[32m',' exécuté','\x1b[0m')
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m','Console','','' ,'--->', '\x1b[33m','Session:','\x1b[37m','"Ban"','\x1b[32m',' lancé','\x1b[0m')
   }
  
  // bannisement n°1
@@ -121,15 +124,16 @@ bot.on('message', function (message){
 		 // log fonctionnalité
 			d = new Date();
 			heureDate(d);
+			user = message.member.user.username;
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 1"','\x1b[31m',' refusé','\x1b[0m')
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 1"','\x1b[31m',' refusé','\x1b[0m')
 	 } else {
 		ban1 =1;
 		message.reply('a banni Club House')
 		
 		switch (ban1) {
 			case 1:
-				message.channel.send('1 - ' + map1x);
+				message.channel.send('~~1 - ' + map1x +'~~');
 			break;
 			case 0:
 				message.channel.send('1 - ' + map1);
@@ -137,7 +141,7 @@ bot.on('message', function (message){
 		}
 		switch (ban2) {
 			case 1:
-				message.channel.send('2 - ' + map2x);
+				message.channel.send('~~2 - ' + map2x +'~~');
 			break;
 			case 0:
 				message.channel.send('2 - ' +map2);
@@ -145,7 +149,7 @@ bot.on('message', function (message){
 		}
 		switch (ban3) {
 			case 1:
-				message.channel.send('3 - ' + map3x);
+				message.channel.send('~~3 - ' + map3x +'~~');
 			break;
 			case 0:
 				message.channel.send('3 - ' + map3);
@@ -153,7 +157,7 @@ bot.on('message', function (message){
 		}
 		switch (ban4) {
 			case 1:
-				message.channel.send('4 - ' + map4x);
+				message.channel.send('~~4 - ' + map4x +'~~');
 			break;
 			case 0:
 				message.channel.send('4 - ' +map4);
@@ -161,7 +165,7 @@ bot.on('message', function (message){
 		}
 		switch (ban5) {
 			case 1:
-				message.channel.send('5 - ' +map5x);
+				message.channel.send('~~5 - ' +map5x +'~~');
 			break;
 			case 0:
 				message.channel.send('5 - ' + map5);
@@ -169,7 +173,7 @@ bot.on('message', function (message){
 		}
 		switch (ban6) {
 			case 1:
-				message.channel.send('6 - ' + map6x);
+				message.channel.send('~~6 - ' + map6x +'~~');
 			break;
 			case 0:
 				message.channel.send('6 - ' + map6);
@@ -177,7 +181,7 @@ bot.on('message', function (message){
 		}
 		switch (ban7) {
 			case 1:
-				message.channel.send('7 - ' + map7x);
+				message.channel.send('~~7 - ' + map7x +'~~');
 			break;
 			case 0:
 				message.channel.send('7 - ' + map7);
@@ -187,8 +191,9 @@ bot.on('message', function (message){
 		// log fonctionnalité
 			d = new Date();
 			heureDate(d);
+			user = message.member.user.username;
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 1"','\x1b[32m',' exécuté','\x1b[0m')
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 1"','\x1b[32m',' exécuté','\x1b[0m')
 	 }
  }
 	
@@ -200,15 +205,16 @@ bot.on('message', function (message){
 		 // log fonctionnalité
 			d = new Date();
 			heureDate(d);
+			user = message.member.user.username;
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 2"','\x1b[31m',' refusé','\x1b[0m')
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 2"','\x1b[31m',' refusé','\x1b[0m')
 	 } else {
 			 ban2 =1;
 		message.reply('a banni Consulat')
 		
 		switch (ban1) {
 			case 1:
-				message.channel.send('1 - ' + map1x);
+				message.channel.send('~~1 - ' + map1x +'~~');
 			break;
 			case 0:
 				message.channel.send('1 - ' + map1);
@@ -216,7 +222,7 @@ bot.on('message', function (message){
 		}
 		switch (ban2) {
 			case 1:
-				message.channel.send('2 - ' + map2x);
+				message.channel.send('~~2 - ' + map2x +'~~');
 			break;
 			case 0:
 				message.channel.send('2 - ' +map2);
@@ -224,7 +230,7 @@ bot.on('message', function (message){
 		}
 		switch (ban3) {
 			case 1:
-				message.channel.send('3 - ' + map3x);
+				message.channel.send('~~3 - ' + map3x +'~~');
 			break;
 			case 0:
 				message.channel.send('3 - ' + map3);
@@ -232,7 +238,7 @@ bot.on('message', function (message){
 		}
 		switch (ban4) {
 			case 1:
-				message.channel.send('4 - ' + map4x);
+				message.channel.send('~~4 - ' + map4x +'~~');
 			break;
 			case 0:
 				message.channel.send('4 - ' +map4);
@@ -240,7 +246,7 @@ bot.on('message', function (message){
 		}
 		switch (ban5) {
 			case 1:
-				message.channel.send('5 - ' +map5x);
+				message.channel.send('~~5 - ' +map5x +'~~');
 			break;
 			case 0:
 				message.channel.send('5 - ' + map5);
@@ -248,7 +254,7 @@ bot.on('message', function (message){
 		}
 		switch (ban6) {
 			case 1:
-				message.channel.send('6 - ' + map6x);
+				message.channel.send('~~6 - ' + map6x +'~~');
 			break;
 			case 0:
 				message.channel.send('6 - ' + map6);
@@ -256,7 +262,7 @@ bot.on('message', function (message){
 		}
 		switch (ban7) {
 			case 1:
-				message.channel.send('7 - ' + map7x);
+				message.channel.send('~~7 - ' + map7x +'~~');
 			break;
 			case 0:
 				message.channel.send('7 - ' + map7);
@@ -266,8 +272,9 @@ bot.on('message', function (message){
 		// log fonctionnalité
 			d = new Date();
 			heureDate(d);
+			user = message.member.user.username;
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 2"','\x1b[32m',' exécuté','\x1b[0m')
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 2"','\x1b[32m',' exécuté','\x1b[0m')
 	 }
  }	
  
@@ -279,15 +286,16 @@ bot.on('message', function (message){
 		 // log fonctionnalité
 			d = new Date();
 			heureDate(d);
+			user = message.member.user.username;
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 3"','\x1b[31m',' refusé','\x1b[0m')
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 3"','\x1b[31m',' refusé','\x1b[0m')
 	 } else {
 			 ban3 =1;
 		message.reply('a banni Banque')
 		
 		switch (ban1) {
 			case 1:
-				message.channel.send('1 - ' + map1x);
+				message.channel.send('~~1 - ' + map1x +'~~');
 			break;
 			case 0:
 				message.channel.send('1 - ' + map1);
@@ -295,7 +303,7 @@ bot.on('message', function (message){
 		}
 		switch (ban2) {
 			case 1:
-				message.channel.send('2 - ' + map2x);
+				message.channel.send('~~2 - ' + map2x +'~~');
 			break;
 			case 0:
 				message.channel.send('2 - ' +map2);
@@ -303,7 +311,7 @@ bot.on('message', function (message){
 		}
 		switch (ban3) {
 			case 1:
-				message.channel.send('3 - ' + map3x);
+				message.channel.send('~~3 - ' + map3x +'~~');
 			break;
 			case 0:
 				message.channel.send('3 - ' + map3);
@@ -311,7 +319,7 @@ bot.on('message', function (message){
 		}
 		switch (ban4) {
 			case 1:
-				message.channel.send('4 - ' + map4x);
+				message.channel.send('~~4 - ' + map4x +'~~');
 			break;
 			case 0:
 				message.channel.send('4 - ' +map4);
@@ -319,7 +327,7 @@ bot.on('message', function (message){
 		}
 		switch (ban5) {
 			case 1:
-				message.channel.send('5 - ' +map5x);
+				message.channel.send('~~5 - ' +map5x +'~~');
 			break;
 			case 0:
 				message.channel.send('5 - ' + map5);
@@ -327,7 +335,7 @@ bot.on('message', function (message){
 		}
 		switch (ban6) {
 			case 1:
-				message.channel.send('6 - ' + map6x);
+				message.channel.send('~~6 - ' + map6x +'~~');
 			break;
 			case 0:
 				message.channel.send('6 - ' + map6);
@@ -335,7 +343,7 @@ bot.on('message', function (message){
 		}
 		switch (ban7) {
 			case 1:
-				message.channel.send('7 - ' + map7x);
+				message.channel.send('~~7 - ' + map7x +'~~');
 			break;
 			case 0:
 				message.channel.send('7 - ' + map7);
@@ -345,8 +353,9 @@ bot.on('message', function (message){
 		// log fonctionnalité
 			d = new Date();
 			heureDate(d);
+			user = message.member.user.username;
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"bna 3"','\x1b[32m',' exécuté','\x1b[0m')
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 3"','\x1b[32m',' exécuté','\x1b[0m')
 	 }
  }
  
@@ -358,15 +367,16 @@ bot.on('message', function (message){
 		 // log fonctionnalité
 			d = new Date();
 			heureDate(d);
+			user = message.member.user.username;
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 4"','\x1b[31m',' refusé','\x1b[0m')
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 4"','\x1b[31m',' refusé','\x1b[0m')
 	 } else {
 		ban4 =1;
 		message.reply('a banni Café Dostoyevsky')
 		
 		switch (ban1) {
 			case 1:
-				message.channel.send('1 - ' + map1x);
+				message.channel.send('~~1 - ' + map1x +'~~');
 			break;
 			case 0:
 				message.channel.send('1 - ' + map1);
@@ -374,7 +384,7 @@ bot.on('message', function (message){
 		}
 		switch (ban2) {
 			case 1:
-				message.channel.send('2 - ' + map2x);
+				message.channel.send('~~2 - ' + map2x +'~~');
 			break;
 			case 0:
 				message.channel.send('2 - ' +map2);
@@ -382,7 +392,7 @@ bot.on('message', function (message){
 		}
 		switch (ban3) {
 			case 1:
-				message.channel.send('3 - ' + map3x);
+				message.channel.send('~~3 - ' + map3x +'~~');
 			break;
 			case 0:
 				message.channel.send('3 - ' + map3);
@@ -390,7 +400,7 @@ bot.on('message', function (message){
 		}
 		switch (ban4) {
 			case 1:
-				message.channel.send('4 - ' + map4x);
+				message.channel.send('~~4 - ' + map4x +'~~');
 			break;
 			case 0:
 				message.channel.send('4 - ' +map4);
@@ -398,7 +408,7 @@ bot.on('message', function (message){
 		}
 		switch (ban5) {
 			case 1:
-				message.channel.send('5 - ' +map5x);
+				message.channel.send('~~5 - ' +map5x +'~~');
 			break;
 			case 0:
 				message.channel.send('5 - ' + map5);
@@ -406,7 +416,7 @@ bot.on('message', function (message){
 		}
 		switch (ban6) {
 			case 1:
-				message.channel.send('6 - ' + map6x);
+				message.channel.send('~~6 - ' + map6x +'~~');
 			break;
 			case 0:
 				message.channel.send('6 - ' + map6);
@@ -414,7 +424,7 @@ bot.on('message', function (message){
 		}
 		switch (ban7) {
 			case 1:
-				message.channel.send('7 - ' + map7x);
+				message.channel.send('~~7 - ' + map7x +'~~');
 			break;
 			case 0:
 				message.channel.send('7 - ' + map7);
@@ -424,8 +434,9 @@ bot.on('message', function (message){
 		// log fonctionnalité
 			d = new Date();
 			heureDate(d);
+			user = message.member.user.username;
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 4"','\x1b[32m',' exécuté','\x1b[0m')
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 4"','\x1b[32m',' exécuté','\x1b[0m')
 	 }
  }
  
@@ -437,15 +448,16 @@ bot.on('message', function (message){
 		 // log fonctionnalité
 			d = new Date();
 			heureDate(d);
+			user = message.member.user.username;
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 5"','\x1b[31m',' refusé','\x1b[0m')
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 5"','\x1b[31m',' refusé','\x1b[0m')
 	 } else {
 		ban5 =1;
 		message.reply('a banni Frontière')
 		
 		switch (ban1) {
 			case 1:
-				message.channel.send('1 - ' + map1x);
+				message.channel.send('~~1 - ' + map1x +'~~');
 			break;
 			case 0:
 				message.channel.send('1 - ' + map1);
@@ -453,7 +465,7 @@ bot.on('message', function (message){
 		}
 		switch (ban2) {
 			case 1:
-				message.channel.send('2 - ' + map2x);
+				message.channel.send('~~2 - ' + map2x +'~~');
 			break;
 			case 0:
 				message.channel.send('2 - ' +map2);
@@ -461,7 +473,7 @@ bot.on('message', function (message){
 		}
 		switch (ban3) {
 			case 1:
-				message.channel.send('3 - ' + map3x);
+				message.channel.send('~~3 - ' + map3x +'~~');
 			break;
 			case 0:
 				message.channel.send('3 - ' + map3);
@@ -469,7 +481,7 @@ bot.on('message', function (message){
 		}
 		switch (ban4) {
 			case 1:
-				message.channel.send('4 - ' + map4x);
+				message.channel.send('~~4 - ' + map4x +'~~');
 			break;
 			case 0:
 				message.channel.send('4 - ' +map4);
@@ -477,7 +489,7 @@ bot.on('message', function (message){
 		}
 		switch (ban5) {
 			case 1:
-				message.channel.send('5 - ' +map5x);
+				message.channel.send('~~5 - ' +map5x +'~~');
 			break;
 			case 0:
 				message.channel.send('5 - ' + map5);
@@ -485,7 +497,7 @@ bot.on('message', function (message){
 		}
 		switch (ban6) {
 			case 1:
-				message.channel.send('6 - ' + map6x);
+				message.channel.send('~~6 - ' + map6x +'~~');
 			break;
 			case 0:
 				message.channel.send('6 - ' + map6);
@@ -493,7 +505,7 @@ bot.on('message', function (message){
 		}
 		switch (ban7) {
 			case 1:
-				message.channel.send('7 - ' + map7x);
+				message.channel.send('~~7 - ' + map7x +'~~');
 			break;
 			case 0:
 				message.channel.send('7 - ' + map7);
@@ -503,8 +515,9 @@ bot.on('message', function (message){
 		// log fonctionnalité
 			d = new Date();
 			heureDate(d);
+			user = message.member.user.username;
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 5"','\x1b[32m',' exécuté','\x1b[0m')
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 5"','\x1b[32m',' exécuté','\x1b[0m')
 	 }
  }
  
@@ -516,15 +529,16 @@ bot.on('message', function (message){
 		 // log fonctionnalité
 			d = new Date();
 			heureDate(d);
+			user = message.member.user.username;
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 6"','\x1b[31m',' refusé','\x1b[0m')
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 6"','\x1b[31m',' refusé','\x1b[0m')
 	 } else {
 		ban6 =1;
 		message.reply('a banni Litoral')
 		
 		switch (ban1) {
 			case 1:
-				message.channel.send('1 - ' + map1x);
+				message.channel.send('~~1 - ' + map1x +'~~');
 			break;
 			case 0:
 				message.channel.send('1 - ' + map1);
@@ -532,7 +546,7 @@ bot.on('message', function (message){
 		}
 		switch (ban2) {
 			case 1:
-				message.channel.send('2 - ' + map2x);
+				message.channel.send('~~2 - ' + map2x +'~~');
 			break;
 			case 0:
 				message.channel.send('2 - ' +map2);
@@ -540,7 +554,7 @@ bot.on('message', function (message){
 		}
 		switch (ban3) {
 			case 1:
-				message.channel.send('3 - ' + map3x);
+				message.channel.send('~~3 - ' + map3x +'~~');
 			break;
 			case 0:
 				message.channel.send('3 - ' + map3);
@@ -548,7 +562,7 @@ bot.on('message', function (message){
 		}
 		switch (ban4) {
 			case 1:
-				message.channel.send('4 - ' + map4x);
+				message.channel.send('~~4 - ' + map4x +'~~');
 			break;
 			case 0:
 				message.channel.send('4 - ' +map4);
@@ -556,7 +570,7 @@ bot.on('message', function (message){
 		}
 		switch (ban5) {
 			case 1:
-				message.channel.send('5 - ' +map5x);
+				message.channel.send('~~5 - ' +map5x +'~~');
 			break;
 			case 0:
 				message.channel.send('5 - ' + map5);
@@ -564,7 +578,7 @@ bot.on('message', function (message){
 		}
 		switch (ban6) {
 			case 1:
-				message.channel.send('6 - ' + map6x);
+				message.channel.send('~~6 - ' + map6x +'~~');
 			break;
 			case 0:
 				message.channel.send('6 - ' + map6);
@@ -572,7 +586,7 @@ bot.on('message', function (message){
 		}
 		switch (ban7) {
 			case 1:
-				message.channel.send('7 - ' + map7x);
+				message.channel.send('~~7 - ' + map7x +'~~');
 			break;
 			case 0:
 				message.channel.send('7 - ' + map7);
@@ -582,8 +596,9 @@ bot.on('message', function (message){
 		// log fonctionnalité
 			d = new Date();
 			heureDate(d);
+			user = message.member.user.username;
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 6"','\x1b[32m',' exécuté','\x1b[0m')
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 6"','\x1b[32m',' exécuté','\x1b[0m')
 	 }
  }
  
@@ -595,15 +610,16 @@ bot.on('message', function (message){
 		 // log fonctionnalité
 			d = new Date();
 			heureDate(d);
+			user = message.member.user.username;
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 7"','\x1b[31m',' refusé','\x1b[0m')
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 7"','\x1b[31m',' refusé','\x1b[0m')
 	 } else {
 		ban7 =1;
 		message.reply('a banni Villa')
 		
 		switch (ban1) {
 			case 1:
-				message.channel.send('1 - ' + map1x);
+				message.channel.send('~~1 - ' + map1x +'~~');
 			break;
 			case 0:
 				message.channel.send('1 - ' + map1);
@@ -611,7 +627,7 @@ bot.on('message', function (message){
 		}
 		switch (ban2) {
 			case 1:
-				message.channel.send('2 - ' + map2x);
+				message.channel.send('~~2 - ' + map2x +'~~');
 			break;
 			case 0:
 				message.channel.send('2 - ' +map2);
@@ -619,7 +635,7 @@ bot.on('message', function (message){
 		}
 		switch (ban3) {
 			case 1:
-				message.channel.send('3 - ' + map3x);
+				message.channel.send('~~3 - ' + map3x +'~~');
 			break;
 			case 0:
 				message.channel.send('3 - ' + map3);
@@ -627,7 +643,7 @@ bot.on('message', function (message){
 		}
 		switch (ban4) {
 			case 1:
-				message.channel.send('4 - ' + map4x);
+				message.channel.send('~~4 - ' + map4x +'~~');
 			break;
 			case 0:
 				message.channel.send('4 - ' +map4);
@@ -635,7 +651,7 @@ bot.on('message', function (message){
 		}
 		switch (ban5) {
 			case 1:
-				message.channel.send('5 - ' +map5x);
+				message.channel.send('~~5 - ' +map5x +'~~');
 			break;
 			case 0:
 				message.channel.send('5 - ' + map5);
@@ -643,7 +659,7 @@ bot.on('message', function (message){
 		}
 		switch (ban6) {
 			case 1:
-				message.channel.send('6 - ' + map6x);
+				message.channel.send('~~6 - ' + map6x +'~~');
 			break;
 			case 0:
 				message.channel.send('6 - ' + map6);
@@ -651,7 +667,7 @@ bot.on('message', function (message){
 		}
 		switch (ban7) {
 			case 1:
-				message.channel.send('7 - ' + map7x);
+				message.channel.send('~~7 - ' + map7x +'~~');
 			break;
 			case 0:
 				message.channel.send('7 - ' + map7);
@@ -661,8 +677,9 @@ bot.on('message', function (message){
 		// log fonctionnalité
 			d = new Date();
 			heureDate(d);
+			user = message.member.user.username;
 	  
-			console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"ban 7"','\x1b[32m',' exécuté','\x1b[0m')
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 7"','\x1b[32m',' exécuté','\x1b[0m')
 	 }
  }
   
@@ -680,9 +697,10 @@ bot.on('message', function (message){
 			 // log fonctionnalité
 				d = new Date();
 				heureDate(d);
+				user = message.member.user.username;
 	  
-				console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"stop"','\x1b[32m',' exécuté','\x1b[0m')
-				console.log('['+ dformat +']'+ '\x1b[31m','Session:','\x1b[37m','"Ban"','\x1b[32m',' stoppé','\x1b[0m')
+				console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"stop"','\x1b[32m',' exécuté','\x1b[0m')
+				console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m','Console','','' ,'--->', '\x1b[33m','Session:','\x1b[37m','"Ban"','\x1b[31m',' stoppé','\x1b[0m')
 	}
 
 	// Help
@@ -701,8 +719,9 @@ bot.on('message', function (message){
 			// log fonctionnalité
 				d = new Date();
 				heureDate(d);
+				user = message.member.user.username;
 	  
-				console.log('['+ dformat +']'+ '\x1b[31m','Commande:','\x1b[37m','"help"','\x1b[32m',' exécuté','\x1b[0m')
+				console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"help"','\x1b[32m',' exécuté','\x1b[0m')
 	}
 })
 // fin
