@@ -22,7 +22,7 @@ Pour faire un vote des maps pour des tournois et matchs Rainbow Six Siege (PC, P
 
 
 # Notes de versions:
-- 2.1 : (Longtemps) Amélioration de l'affichage des bans (ajout de l'image de la map). + Enregistrement automatique des logs dans un fichier text (logs.txt).
+- 2.1 : (Longtemps) Amélioration de l'affichage des bans (ajout de l'image de la map). + Enregistrement automatique des logs dans un fichier text (logs.txt). + Modification de l'affichage des messages (avant = plusieurs message. maintenant = un gros message).
 - 2.0 : Ajout d'une sesion pour ban (ce qui marque la fin de la beta). + Modification de l'indentation du srcipt
 - Beta 1.6 : Ajout du nom (speudo) de la personne qui exécute une commande dans les logs (sur la console). + Modification des logs (nouveau code couleurs: Jaune = action, Rouge = commande refusé/pas valide, Vert = accepté/valide). + Modification de petits trucs (ortographe, mise en forme...).
 - Beta 1.5 : Ajout d'une réponse du bot si une commande (!vote) n'existe pas. + Ajout d'un message si une commande ban à déjà était utilisée. + Correction du bug de "empty message" visible dans la console quand la commande help été exectué.
