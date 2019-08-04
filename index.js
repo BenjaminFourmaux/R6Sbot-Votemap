@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 bot.login('Insert your token') // token de connexion
 
-version = '2.1'; // Version du script
+version = '2.2'; // Version du script
 
 
 bot.on('ready', function (){
@@ -78,6 +78,12 @@ bot.on('message', function (message){
 			case 'stop':
 				;
 			break;
+			case 'bleu':
+				;
+			break;
+			case 'orange':
+				;
+			break;
 			default:
 				message.channel.send("Cette commande n'existe pas")
 					
@@ -100,6 +106,7 @@ bot.on('message', function (message){
 	}
   
 	
+// Start	
   if (message.content === '!vote start') {
     message.reply('a lancé un ban des maps') // message.channel.send pour envoyer sans tag et message.reply
 	banSession = 1;
@@ -112,208 +119,33 @@ bot.on('message', function (message){
 			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"start"','\x1b[32m',' exécuté','\x1b[0m')
 			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m','Console','','' ,'--->', '\x1b[33m','Session:','\x1b[37m','"Ban"','\x1b[32m',' lancé','\x1b[0m')
   }
- 
- // bannisement n°1
- if (message.content === '!vote ban 1') {
-	 if (banSession === 0){ // Vérification session
-			message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
+  
+// Assination équipe
+		// équipe bleu
+		if(message.content==='!vote bleu'){
 			
 			// log fonctionnalité
 				d = new Date();
 				heureDate(d);
 				user = message.member.user.username;
 	  
-			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 1"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
-		} else {
-			if (ban1===1){
-				message.channel.send('Cette map a déjà été bannie !')
-		 
+				console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"bleu"','\x1b[32m',' exécuté','\x1b[0m')
+			
+			if (banSession===1){
+				let role = message.guild.roles.find('name', 'Équipe Bleu')
+				
+				message.member.addRole(role)
+				
+				message.reply("a rejoint l'équipe BLEU :blue_book:")
+				
 				// log fonctionnalité
 					d = new Date();
 					heureDate(d);
-					user = message.member.user.username;
-		
-					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 1"','\x1b[31m',' refusé','\x1b[0m')
+					
+	  
+					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m Console','' ,'--->', '\x1b[33m','Role:','\x1b[37m','"bleu"  pour', +user+ '\x1b[32m',' exécuté','\x1b[0m')
+				
 			} else {
-				ban1 =1;
-				message.reply('a banni Club House')
-				
-				switch (ban1) {
-					case 1:
-						 sendmap1='~~1 - ' + map1x +'~~';
-					break;
-					case 0:
-						 sendmap1='1 - ' + map1;
-					break;
-				}
-				switch (ban2) {
-					case 1:
-						 sendmap2='~~2 - ' + map2x +'~~';
-					break;
-					case 0:
-						 sendmap2='2 - ' +map2;
-					break;
-				}
-				switch (ban3) {
-					case 1:
-						 sendmap3='~~3 - ' + map3x +'~~';
-					break;
-					case 0:
-						 sendmap3='3 - ' + map3;
-					break;
-				}
-				switch (ban4) {
-					case 1:
-						 sendmap4='~~4 - ' + map4x +'~~';
-					break;
-					case 0:
-						 sendmap4='4 - ' +map4;
-					break;
-				}
-				switch (ban5) {
-					case 1:
-						 sendmap5='~~5 - ' +map5x +'~~';
-					break;
-					case 0:
-						 sendmap5='5 - ' + map5;
-					break;
-				}
-				switch (ban6) {
-					case 1:
-						 sendmap6='~~6 - ' + map6x +'~~';
-					break;
-					case 0:
-						 sendmap6='6 - ' + map6;
-					break;
-				}
-				switch (ban7) {
-					case 1:
-						 sendmap7='~~7 - ' + map7x +'~~';
-					break;
-					case 0:
-						 sendmap7='7 - ' + map7;
-					break;
-				}
-				
-				message.channel.send(sendmap1+ '\n' +sendmap2+ '\n' +sendmap3+ '\n'+sendmap4+ '\n'+sendmap5+ '\n' +sendmap6+ '\n' +sendmap7+ '\n')   
-		
-				// log fonctionnalité
-					d = new Date();
-					heureDate(d);
-					user = message.member.user.username;
-	  
-					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 1"','\x1b[32m',' exécuté','\x1b[0m')
-			}
-		}
-	}
-	
- // bannisement n°2
-	if (message.content === '!vote ban 2') {
-		if (banSession === 0){ // Vérification session
-			message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
-			
-			// log fonctionnalité
-				d = new Date();
-				heureDate(d);
-				user = message.member.user.username;
-	  
-				console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 2"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
-		} else {
-			if (ban2===1){
-				message.channel.send('Cette map a déjà été bannie !')
-		 
-				// log fonctionnalité
-					d = new Date();
-					heureDate(d);
-					user = message.member.user.username;
-	  
-					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 2"','\x1b[31m',' refusé','\x1b[0m')
-			} else {
-				ban2 =1;
-				message.reply('a banni Consulat')
-		
-				switch (ban1) {
-					case 1:
-						 sendmap1='~~1 - ' + map1x +'~~';
-					break;
-					case 0:
-						 sendmap1='1 - ' + map1;
-					break;
-				}
-				switch (ban2) {
-					case 1:
-						 sendmap2='~~2 - ' + map2x +'~~';
-					break;
-					case 0:
-						 sendmap2='2 - ' +map2;
-					break;
-				}
-				switch (ban3) {
-					case 1:
-						 sendmap3='~~3 - ' + map3x +'~~';
-					break;
-					case 0:
-						 sendmap3='3 - ' + map3;
-					break;
-				}
-				switch (ban4) {
-					case 1:
-						 sendmap4='~~4 - ' + map4x +'~~';
-					break;
-					case 0:
-						 sendmap4='4 - ' +map4;
-					break;
-				}
-				switch (ban5) {
-					case 1:
-						 sendmap5='~~5 - ' +map5x +'~~';
-					break;
-					case 0:
-						 sendmap5='5 - ' + map5;
-					break;
-				}
-				switch (ban6) {
-					case 1:
-						 sendmap6='~~6 - ' + map6x +'~~';
-					break;
-					case 0:
-						 sendmap6='6 - ' + map6;
-					break;
-				}
-				switch (ban7) {
-					case 1:
-						 sendmap7='~~7 - ' + map7x +'~~';
-					break;
-					case 0:
-						 sendmap7='7 - ' + map7;
-					break;
-				}
-				
-				message.channel.send(sendmap1+ '\n' +sendmap2+ '\n' +sendmap3+ '\n'+sendmap4+ '\n'+sendmap5+ '\n' +sendmap6+ '\n' +sendmap7+ '\n') 
-		
-				// log fonctionnalité
-					d = new Date();
-					heureDate(d);
-					user = message.member.user.username;
-	  
-					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 2"','\x1b[32m',' exécuté','\x1b[0m')
-			}
-		}
-	}	
- 
-  // bannisement n°3
-	if (message.content === '!vote ban 3') {
-		if (banSession === 0){ // Vérification session
-			message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
-			
-			// log fonctionnalité
-				d = new Date();
-				heureDate(d);
-				user = message.member.user.username;
-	  
-				console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 3"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
-		} else {
-			if (banSession === 0){
 				message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
 			
 				// log fonctionnalité
@@ -321,466 +153,761 @@ bot.on('message', function (message){
 					heureDate(d);
 					user = message.member.user.username;
 	  
-					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 1"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
-			} else {
-				if (ban3===1){
-					message.channel.send('Cette map a déjà été bannie !')
-		 
-					// log fonctionnalité
-						d = new Date();
-						heureDate(d);
-						user = message.member.user.username;
-	  
-						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 3"','\x1b[31m',' refusé','\x1b[0m')
-				} else {
-					ban3 =1;
-					message.reply('a banni Banque')
+					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"bleu"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
+			}
+		}
 		
-					switch (ban1) {
-					case 1:
-						 sendmap1='~~1 - ' + map1x +'~~';
-					break;
-					case 0:
-						 sendmap1='1 - ' + map1;
-					break;
-				}
-				switch (ban2) {
-					case 1:
-						 sendmap2='~~2 - ' + map2x +'~~';
-					break;
-					case 0:
-						 sendmap2='2 - ' +map2;
-					break;
-				}
-				switch (ban3) {
-					case 1:
-						 sendmap3='~~3 - ' + map3x +'~~';
-					break;
-					case 0:
-						 sendmap3='3 - ' + map3;
-					break;
-				}
-				switch (ban4) {
-					case 1:
-						 sendmap4='~~4 - ' + map4x +'~~';
-					break;
-					case 0:
-						 sendmap4='4 - ' +map4;
-					break;
-				}
-				switch (ban5) {
-					case 1:
-						 sendmap5='~~5 - ' +map5x +'~~';
-					break;
-					case 0:
-						 sendmap5='5 - ' + map5;
-					break;
-				}
-				switch (ban6) {
-					case 1:
-						 sendmap6='~~6 - ' + map6x +'~~';
-					break;
-					case 0:
-						 sendmap6='6 - ' + map6;
-					break;
-				}
-				switch (ban7) {
-					case 1:
-						 sendmap7='~~7 - ' + map7x +'~~';
-					break;
-					case 0:
-						 sendmap7='7 - ' + map7;
-					break;
-				}
+		// équipe orange
+		if(message.content==='!vote orange'){
+			
+			// log fonctionnalité
+				d = new Date();
+				heureDate(d);
+				user = message.member.user.username;
+	  
+				console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"orange"','\x1b[32m',' exécuté','\x1b[0m')
+			
+			if (banSession===1){
+				let role = message.guild.roles.find('name', 'Équipe Orange')
 				
-				message.channel.send(sendmap1+ '\n' +sendmap2+ '\n' +sendmap3+ '\n'+sendmap4+ '\n'+sendmap5+ '\n' +sendmap6+ '\n' +sendmap7+ '\n') 
+				message.member.addRole(role)
+				
+				message.reply("a rejoint l'équipe ORANGE :orange_book:")
+				
+				// log fonctionnalité
+					d = new Date();
+					heureDate(d);
+					
+	  
+					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m Console','' ,'--->', '\x1b[33m','Role:','\x1b[37m','"orange"  pour', +user+ '\x1b[32m',' exécuté','\x1b[0m')
+				
+			} else {
+				message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
+			
+				// log fonctionnalité
+					d = new Date();
+					heureDate(d);
+					user = message.member.user.username;
+	  
+					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"orange"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
+			}
+		}
+  
+ 
+// bannisement n°1
+ if (message.content === '!vote ban 1') {
+	if (banSession === 0){ // Vérification session
+		message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
+			
+		// log fonctionnalité
+			d = new Date();
+			heureDate(d);
+			user = message.member.user.username;
+	  
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 1"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
+	} else {
+			if (ban1===1){
+				message.channel.send('Cette map a déjà été bannie !')
+				
+				// log fonctionnalité
+					d = new Date();
+					heureDate(d);
+					user = message.member.user.username;
+		
+					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 1"','\x1b[31m',' refusé','\x1b[0m')
+			} else {
+					ban1 =1;
+				
+					if (message.member.roles.find('name', 'Équipe Bleu')){
+						indication1Role = ':blue_book:';
+						userRole = '(bleu)'
+					} else if (message.member.roles.find('name', 'Équipe Orange')){
+						indication1Role = ':orange_book:';
+						userRole = '(orange)'
+					}
+					message.reply('a banni Club House')
+				
+					switch (ban1) {
+						case 1:
+							sendmap1='~~1 - ' + map1x +'~~' + indication1Role;
+						break;
+						case 0:
+							sendmap1='1 - ' + map1;
+						break;
+					}
+					switch (ban2) {
+						case 1:
+							sendmap2='~~2 - ' + map2x +'~~' + indication2Role;
+						break;
+						case 0:
+							sendmap2='2 - ' +map2;
+						break;
+					}
+					switch (ban3) {
+						case 1:
+							sendmap3='~~3 - ' + map3x +'~~' + indication3Role;
+						break;
+						case 0:
+							sendmap3='3 - ' + map3;
+						break;
+					}
+					switch (ban4) {
+						case 1:
+							sendmap4='~~4 - ' + map4x +'~~' + indication4Role;
+						break;
+						case 0:
+							sendmap4='4 - ' +map4;
+						break;
+					}
+					switch (ban5) {
+						case 1:
+							sendmap5='~~5 - ' +map5x +'~~' + indication5Role;
+						break;
+						case 0:
+							sendmap5='5 - ' + map5;
+						break;
+					}
+					switch (ban6) {
+						case 1:
+							sendmap6='~~6 - ' + map6x +'~~' + indication6Role;
+						break;
+						case 0:
+							sendmap6='6 - ' + map6;
+						break;
+					}
+					switch (ban7) {
+						case 1:
+							sendmap7='~~7 - ' + map7x +'~~' + indication7Role;
+						break;
+						case 0:
+							sendmap7='7 - ' + map7;
+						break;
+					}
+				
+					message.channel.send(sendmap1+ '\n' +sendmap2+ '\n' +sendmap3+ '\n'+sendmap4+ '\n'+sendmap5+ '\n' +sendmap6+ '\n' +sendmap7+ '\n')   
 		
 					// log fonctionnalité
 						d = new Date();
 						heureDate(d);
-						user = message.member.user.username;
+						user = message.member.user.username +userRole;
+						
+						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 1"','\x1b[32m',' exécuté','\x1b[0m')
+			}
+	}
+}
+	
+// bannisement n°2
+ if (message.content === '!vote ban 2') {
+	if (banSession === 0){ // Vérification session
+		message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
+			
+		// log fonctionnalité
+			d = new Date();
+			heureDate(d);
+			user = message.member.user.username;
 	  
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 2"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
+	} else {
+			if (ban2===1){
+				message.channel.send('Cette map a déjà été bannie !')
+				
+				// log fonctionnalité
+					d = new Date();
+					heureDate(d);
+					user = message.member.user.username;
+		
+					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 2"','\x1b[31m',' refusé','\x1b[0m')
+			} else {
+					ban2 =1;
+				
+					if (message.member.roles.find('name', 'Équipe Bleu')){
+						indication2Role = ':blue_book:';
+						userRole = '(bleu)'
+					} else if (message.member.roles.find('name', 'Équipe Orange')){
+						indication2Role = ':orange_book:';
+						userRole = '(orange)'
+					}
+					message.reply('a banni Consulat')
+				
+					switch (ban1) {
+						case 1:
+							sendmap1='~~1 - ' + map1x +'~~' + indication1Role;
+						break;
+						case 0:
+							sendmap1='1 - ' + map1;
+						break;
+					}
+					switch (ban2) {
+						case 1:
+							sendmap2='~~2 - ' + map2x +'~~' + indication2Role;
+						break;
+						case 0:
+							sendmap2='2 - ' +map2;
+						break;
+					}
+					switch (ban3) {
+						case 1:
+							sendmap3='~~3 - ' + map3x +'~~' + indication3Role;
+						break;
+						case 0:
+							sendmap3='3 - ' + map3;
+						break;
+					}
+					switch (ban4) {
+						case 1:
+							sendmap4='~~4 - ' + map4x +'~~' + indication4Role;
+						break;
+						case 0:
+							sendmap4='4 - ' +map4;
+						break;
+					}
+					switch (ban5) {
+						case 1:
+							sendmap5='~~5 - ' +map5x +'~~' + indication5Role;
+						break;
+						case 0:
+							sendmap5='5 - ' + map5;
+						break;
+					}
+					switch (ban6) {
+						case 1:
+							sendmap6='~~6 - ' + map6x +'~~' + indication6Role;
+						break;
+						case 0:
+							sendmap6='6 - ' + map6;
+						break;
+					}
+					switch (ban7) {
+						case 1:
+							sendmap7='~~7 - ' + map7x +'~~' + indication7Role;
+						break;
+						case 0:
+							sendmap7='7 - ' + map7;
+						break;
+					}
+				
+					message.channel.send(sendmap1+ '\n' +sendmap2+ '\n' +sendmap3+ '\n'+sendmap4+ '\n'+sendmap5+ '\n' +sendmap6+ '\n' +sendmap7+ '\n')   
+		
+					// log fonctionnalité
+						d = new Date();
+						heureDate(d);
+						user = message.member.user.username +userRole;
+						
+						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 2"','\x1b[32m',' exécuté','\x1b[0m')
+			}
+	}
+}
+
+// bannisement n°3
+ if (message.content === '!vote ban 3') {
+	if (banSession === 0){ // Vérification session
+		message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
+			
+		// log fonctionnalité
+			d = new Date();
+			heureDate(d);
+			user = message.member.user.username;
+	  
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 3"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
+	} else {
+			if (ban3===1){
+				message.channel.send('Cette map a déjà été bannie !')
+				
+				// log fonctionnalité
+					d = new Date();
+					heureDate(d);
+					user = message.member.user.username;
+		
+					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 3"','\x1b[31m',' refusé','\x1b[0m')
+			} else {
+					ban3 =1;
+				
+					if (message.member.roles.find('name', 'Équipe Bleu')){
+						indication3Role = ':blue_book:';
+						userRole = '(bleu)'
+					} else if (message.member.roles.find('name', 'Équipe Orange')){
+						indication3Role = ':orange_book:';
+						userRole = '(orange)'
+					}
+					message.reply('a banni Banque')
+				
+					switch (ban1) {
+						case 1:
+							sendmap1='~~1 - ' + map1x +'~~' + indication1Role;
+						break;
+						case 0:
+							sendmap1='1 - ' + map1;
+						break;
+					}
+					switch (ban2) {
+						case 1:
+							sendmap2='~~2 - ' + map2x +'~~' + indication2Role;
+						break;
+						case 0:
+							sendmap2='2 - ' +map2;
+						break;
+					}
+					switch (ban3) {
+						case 1:
+							sendmap3='~~3 - ' + map3x +'~~' + indication3Role;
+						break;
+						case 0:
+							sendmap3='3 - ' + map3;
+						break;
+					}
+					switch (ban4) {
+						case 1:
+							sendmap4='~~4 - ' + map4x +'~~' + indication4Role;
+						break;
+						case 0:
+							sendmap4='4 - ' +map4;
+						break;
+					}
+					switch (ban5) {
+						case 1:
+							sendmap5='~~5 - ' +map5x +'~~' + indication5Role;
+						break;
+						case 0:
+							sendmap5='5 - ' + map5;
+						break;
+					}
+					switch (ban6) {
+						case 1:
+							sendmap6='~~6 - ' + map6x +'~~' + indication6Role;
+						break;
+						case 0:
+							sendmap6='6 - ' + map6;
+						break;
+					}
+					switch (ban7) {
+						case 1:
+							sendmap7='~~7 - ' + map7x +'~~' + indication7Role;
+						break;
+						case 0:
+							sendmap7='7 - ' + map7;
+						break;
+					}
+				
+					message.channel.send(sendmap1+ '\n' +sendmap2+ '\n' +sendmap3+ '\n'+sendmap4+ '\n'+sendmap5+ '\n' +sendmap6+ '\n' +sendmap7+ '\n')   
+		
+					// log fonctionnalité
+						d = new Date();
+						heureDate(d);
+						user = message.member.user.username +userRole;
+						
 						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 3"','\x1b[32m',' exécuté','\x1b[0m')
 			}
-		}
-		}
 	}
- 
-  // bannisement n°4
+}
+
+// bannisement n°4
  if (message.content === '!vote ban 4') {
-	 if (banSession === 0){ // Vérification Session
-			message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
+	if (banSession === 0){ // Vérification session
+		message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
 			
-			// log fonctionnalité
-				d = new Date();
-				heureDate(d);
-				user = message.member.user.username;
+		// log fonctionnalité
+			d = new Date();
+			heureDate(d);
+			user = message.member.user.username;
 	  
-				console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 4"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
-		} else {
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 4"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
+	} else {
 			if (ban4===1){
 				message.channel.send('Cette map a déjà été bannie !')
-		 
+				
 				// log fonctionnalité
 					d = new Date();
 					heureDate(d);
 					user = message.member.user.username;
-	  
+		
 					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 4"','\x1b[31m',' refusé','\x1b[0m')
 			} else {
-				ban4 =1;
-				message.reply('a banni Café Dostoyevsky')
-		
-				switch (ban1) {
-					case 1:
-						 sendmap1='~~1 - ' + map1x +'~~';
-					break;
-					case 0:
-						 sendmap1='1 - ' + map1;
-					break;
-				}
-				switch (ban2) {
-					case 1:
-						 sendmap2='~~2 - ' + map2x +'~~';
-					break;
-					case 0:
-						 sendmap2='2 - ' +map2;
-					break;
-				}
-				switch (ban3) {
-					case 1:
-						 sendmap3='~~3 - ' + map3x +'~~';
-					break;
-					case 0:
-						 sendmap3='3 - ' + map3;
-					break;
-				}
-				switch (ban4) {
-					case 1:
-						 sendmap4='~~4 - ' + map4x +'~~';
-					break;
-					case 0:
-						 sendmap4='4 - ' +map4;
-					break;
-				}
-				switch (ban5) {
-					case 1:
-						 sendmap5='~~5 - ' +map5x +'~~';
-					break;
-					case 0:
-						 sendmap5='5 - ' + map5;
-					break;
-				}
-				switch (ban6) {
-					case 1:
-						 sendmap6='~~6 - ' + map6x +'~~';
-					break;
-					case 0:
-						 sendmap6='6 - ' + map6;
-					break;
-				}
-				switch (ban7) {
-					case 1:
-						 sendmap7='~~7 - ' + map7x +'~~';
-					break;
-					case 0:
-						 sendmap7='7 - ' + map7;
-					break;
-				}
+					ban4 =1;
 				
-				message.channel.send(sendmap1+ '\n' +sendmap2+ '\n' +sendmap3+ '\n'+sendmap4+ '\n'+sendmap5+ '\n' +sendmap6+ '\n' +sendmap7+ '\n') 
+					if (message.member.roles.find('name', 'Équipe Bleu')){
+						indication4Role = ':blue_book:';
+						userRole = '(bleu)'
+					} else if (message.member.roles.find('name', 'Équipe Orange')){
+						indication4Role = ':orange_book:';
+						userRole = '(orange)'
+					}
+					message.reply('a banni Café Dostoyevsky')
+				
+					switch (ban1) {
+						case 1:
+							sendmap1='~~1 - ' + map1x +'~~' + indication1Role;
+						break;
+						case 0:
+							sendmap1='1 - ' + map1;
+						break;
+					}
+					switch (ban2) {
+						case 1:
+							sendmap2='~~2 - ' + map2x +'~~' + indication2Role;
+						break;
+						case 0:
+							sendmap2='2 - ' +map2;
+						break;
+					}
+					switch (ban3) {
+						case 1:
+							sendmap3='~~3 - ' + map3x +'~~' + indication3Role;
+						break;
+						case 0:
+							sendmap3='3 - ' + map3;
+						break;
+					}
+					switch (ban4) {
+						case 1:
+							sendmap4='~~4 - ' + map4x +'~~' + indication4Role;
+						break;
+						case 0:
+							sendmap4='4 - ' +map4;
+						break;
+					}
+					switch (ban5) {
+						case 1:
+							sendmap5='~~5 - ' +map5x +'~~' + indication5Role;
+						break;
+						case 0:
+							sendmap5='5 - ' + map5;
+						break;
+					}
+					switch (ban6) {
+						case 1:
+							sendmap6='~~6 - ' + map6x +'~~' + indication6Role;
+						break;
+						case 0:
+							sendmap6='6 - ' + map6;
+						break;
+					}
+					switch (ban7) {
+						case 1:
+							sendmap7='~~7 - ' + map7x +'~~' + indication7Role;
+						break;
+						case 0:
+							sendmap7='7 - ' + map7;
+						break;
+					}
+				
+					message.channel.send(sendmap1+ '\n' +sendmap2+ '\n' +sendmap3+ '\n'+sendmap4+ '\n'+sendmap5+ '\n' +sendmap6+ '\n' +sendmap7+ '\n')   
 		
-				// log fonctionnalité
-					d = new Date();
-					heureDate(d);
-					user = message.member.user.username;
-	  
-					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 4"','\x1b[32m',' exécuté','\x1b[0m')
+					// log fonctionnalité
+						d = new Date();
+						heureDate(d);
+						user = message.member.user.username +userRole;
+						
+						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 4"','\x1b[32m',' exécuté','\x1b[0m')
 			}
-		}
 	}
- 
-   // bannisement n°5
+}
+
+// bannisement n°5
  if (message.content === '!vote ban 5') {
-	 if (banSession === 0){ // Vérification Session
-			message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
+	if (banSession === 0){ // Vérification session
+		message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
 			
-			// log fonctionnalité
-				d = new Date();
-				heureDate(d);
-				user = message.member.user.username;
+		// log fonctionnalité
+			d = new Date();
+			heureDate(d);
+			user = message.member.user.username;
 	  
-				console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 5"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
-		} else {
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 5"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
+	} else {
 			if (ban5===1){
 				message.channel.send('Cette map a déjà été bannie !')
-		 
+				
 				// log fonctionnalité
 					d = new Date();
 					heureDate(d);
 					user = message.member.user.username;
-	  
+		
 					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 5"','\x1b[31m',' refusé','\x1b[0m')
 			} else {
-				ban5 =1;
-				message.reply('a banni Frontière')
-		
-				switch (ban1) {
-					case 1:
-						 sendmap1='~~1 - ' + map1x +'~~';
-					break;
-					case 0:
-						 sendmap1='1 - ' + map1;
-					break;
-				}
-				switch (ban2) {
-					case 1:
-						 sendmap2='~~2 - ' + map2x +'~~';
-					break;
-					case 0:
-						 sendmap2='2 - ' +map2;
-					break;
-				}
-				switch (ban3) {
-					case 1:
-						 sendmap3='~~3 - ' + map3x +'~~';
-					break;
-					case 0:
-						 sendmap3='3 - ' + map3;
-					break;
-				}
-				switch (ban4) {
-					case 1:
-						 sendmap4='~~4 - ' + map4x +'~~';
-					break;
-					case 0:
-						 sendmap4='4 - ' +map4;
-					break;
-				}
-				switch (ban5) {
-					case 1:
-						 sendmap5='~~5 - ' +map5x +'~~';
-					break;
-					case 0:
-						 sendmap5='5 - ' + map5;
-					break;
-				}
-				switch (ban6) {
-					case 1:
-						 sendmap6='~~6 - ' + map6x +'~~';
-					break;
-					case 0:
-						 sendmap6='6 - ' + map6;
-					break;
-				}
-				switch (ban7) {
-					case 1:
-						 sendmap7='~~7 - ' + map7x +'~~';
-					break;
-					case 0:
-						 sendmap7='7 - ' + map7;
-					break;
-				}
+					ban5 =1;
 				
-				message.channel.send(sendmap1+ '\n' +sendmap2+ '\n' +sendmap3+ '\n'+sendmap4+ '\n'+sendmap5+ '\n' +sendmap6+ '\n' +sendmap7+ '\n') 
+					if (message.member.roles.find('name', 'Équipe Bleu')){
+						indication5Role = ':blue_book:';
+						userRole = '(bleu)'
+					} else if (message.member.roles.find('name', 'Équipe Orange')){
+						indication5Role = ':orange_book:';
+						userRole = '(orange)'
+					}
+					message.reply('a banni Frontière')
+				
+					switch (ban1) {
+						case 1:
+							sendmap1='~~1 - ' + map1x +'~~' + indication1Role;
+						break;
+						case 0:
+							sendmap1='1 - ' + map1;
+						break;
+					}
+					switch (ban2) {
+						case 1:
+							sendmap2='~~2 - ' + map2x +'~~' + indication2Role;
+						break;
+						case 0:
+							sendmap2='2 - ' +map2;
+						break;
+					}
+					switch (ban3) {
+						case 1:
+							sendmap3='~~3 - ' + map3x +'~~' + indication3Role;
+						break;
+						case 0:
+							sendmap3='3 - ' + map3;
+						break;
+					}
+					switch (ban4) {
+						case 1:
+							sendmap4='~~4 - ' + map4x +'~~' + indication4Role;
+						break;
+						case 0:
+							sendmap4='4 - ' +map4;
+						break;
+					}
+					switch (ban5) {
+						case 1:
+							sendmap5='~~5 - ' +map5x +'~~' + indication5Role;
+						break;
+						case 0:
+							sendmap5='5 - ' + map5;
+						break;
+					}
+					switch (ban6) {
+						case 1:
+							sendmap6='~~6 - ' + map6x +'~~' + indication6Role;
+						break;
+						case 0:
+							sendmap6='6 - ' + map6;
+						break;
+					}
+					switch (ban7) {
+						case 1:
+							sendmap7='~~7 - ' + map7x +'~~' + indication7Role;
+						break;
+						case 0:
+							sendmap7='7 - ' + map7;
+						break;
+					}
+				
+					message.channel.send(sendmap1+ '\n' +sendmap2+ '\n' +sendmap3+ '\n'+sendmap4+ '\n'+sendmap5+ '\n' +sendmap6+ '\n' +sendmap7+ '\n')   
 		
-				// log fonctionnalité
-					d = new Date();
-					heureDate(d);
-					user = message.member.user.username;
-	  
-					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 5"','\x1b[32m',' exécuté','\x1b[0m')
+					// log fonctionnalité
+						d = new Date();
+						heureDate(d);
+						user = message.member.user.username +userRole;
+						
+						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 5"','\x1b[32m',' exécuté','\x1b[0m')
 			}
-		}
 	}
- 
-  // bannisement n°6
+}
+
+// bannisement n°6
  if (message.content === '!vote ban 6') {
-	 if (banSession === 0){ // Vérification Session
-			message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
+	if (banSession === 0){ // Vérification session
+		message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
 			
-			// log fonctionnalité
-				d = new Date();
-				heureDate(d);
-				user = message.member.user.username;
+		// log fonctionnalité
+			d = new Date();
+			heureDate(d);
+			user = message.member.user.username;
 	  
-				console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 6"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
-		} else {
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 6"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
+	} else {
 			if (ban6===1){
 				message.channel.send('Cette map a déjà été bannie !')
-		 
+				
 				// log fonctionnalité
 					d = new Date();
 					heureDate(d);
 					user = message.member.user.username;
-	  
+		
 					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 6"','\x1b[31m',' refusé','\x1b[0m')
 			} else {
-				ban6 =1;
-				message.reply('a banni Litoral')
-		
-				switch (ban1) {
-					case 1:
-						 sendmap1='~~1 - ' + map1x +'~~';
-					break;
-					case 0:
-						 sendmap1='1 - ' + map1;
-					break;
-				}
-				switch (ban2) {
-					case 1:
-						 sendmap2='~~2 - ' + map2x +'~~';
-					break;
-					case 0:
-						 sendmap2='2 - ' +map2;
-					break;
-				}
-				switch (ban3) {
-					case 1:
-						 sendmap3='~~3 - ' + map3x +'~~';
-					break;
-					case 0:
-						 sendmap3='3 - ' + map3;
-					break;
-				}
-				switch (ban4) {
-					case 1:
-						 sendmap4='~~4 - ' + map4x +'~~';
-					break;
-					case 0:
-						 sendmap4='4 - ' +map4;
-					break;
-				}
-				switch (ban5) {
-					case 1:
-						 sendmap5='~~5 - ' +map5x +'~~';
-					break;
-					case 0:
-						 sendmap5='5 - ' + map5;
-					break;
-				}
-				switch (ban6) {
-					case 1:
-						 sendmap6='~~6 - ' + map6x +'~~';
-					break;
-					case 0:
-						 sendmap6='6 - ' + map6;
-					break;
-				}
-				switch (ban7) {
-					case 1:
-						 sendmap7='~~7 - ' + map7x +'~~';
-					break;
-					case 0:
-						 sendmap7='7 - ' + map7;
-					break;
-				}
+					ban6 =1;
 				
-				message.channel.send(sendmap1+ '\n' +sendmap2+ '\n' +sendmap3+ '\n'+sendmap4+ '\n'+sendmap5+ '\n' +sendmap6+ '\n' +sendmap7+ '\n') 
+					if (message.member.roles.find('name', 'Équipe Bleu')){
+						indication6Role = ':blue_book:';
+						userRole = '(bleu)'
+					} else if (message.member.roles.find('name', 'Équipe Orange')){
+						indication6Role = ':orange_book:';
+						userRole = '(orange)'
+					}
+					message.reply('a banni Litoral')
+				
+					switch (ban1) {
+						case 1:
+							sendmap1='~~1 - ' + map1x +'~~' + indication1Role;
+						break;
+						case 0:
+							sendmap1='1 - ' + map1;
+						break;
+					}
+					switch (ban2) {
+						case 1:
+							sendmap2='~~2 - ' + map2x +'~~' + indication2Role;
+						break;
+						case 0:
+							sendmap2='2 - ' +map2;
+						break;
+					}
+					switch (ban3) {
+						case 1:
+							sendmap3='~~3 - ' + map3x +'~~' + indication3Role;
+						break;
+						case 0:
+							sendmap3='3 - ' + map3;
+						break;
+					}
+					switch (ban4) {
+						case 1:
+							sendmap4='~~4 - ' + map4x +'~~' + indication4Role;
+						break;
+						case 0:
+							sendmap4='4 - ' +map4;
+						break;
+					}
+					switch (ban5) {
+						case 1:
+							sendmap5='~~5 - ' +map5x +'~~' + indication5Role;
+						break;
+						case 0:
+							sendmap5='5 - ' + map5;
+						break;
+					}
+					switch (ban6) {
+						case 1:
+							sendmap6='~~6 - ' + map6x +'~~' + indication6Role;
+						break;
+						case 0:
+							sendmap6='6 - ' + map6;
+						break;
+					}
+					switch (ban7) {
+						case 1:
+							sendmap7='~~7 - ' + map7x +'~~' + indication7Role;
+						break;
+						case 0:
+							sendmap7='7 - ' + map7;
+						break;
+					}
+				
+					message.channel.send(sendmap1+ '\n' +sendmap2+ '\n' +sendmap3+ '\n'+sendmap4+ '\n'+sendmap5+ '\n' +sendmap6+ '\n' +sendmap7+ '\n')   
 		
-				// log fonctionnalité
-					d = new Date();
-					heureDate(d);
-					user = message.member.user.username;
-	  
-					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 6"','\x1b[32m',' exécuté','\x1b[0m')
+					// log fonctionnalité
+						d = new Date();
+						heureDate(d);
+						user = message.member.user.username +userRole;
+						
+						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 6"','\x1b[32m',' exécuté','\x1b[0m')
 			}
-		}
 	}
- 
-  // bannisement n°7
+}
+
+// bannisement n°7
  if (message.content === '!vote ban 7') {
-	 if (banSession === 0){ // Vérification Session
-			message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
+	if (banSession === 0){ // Vérification session
+		message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
 			
-			// log fonctionnalité
-				d = new Date();
-				heureDate(d);
-				user = message.member.user.username;
+		// log fonctionnalité
+			d = new Date();
+			heureDate(d);
+			user = message.member.user.username;
 	  
-				console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 4"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
-		} else {
+			console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 7"','\x1b[31m',' refusé','\x1b[0m', '/!/ pas de session ban','\x1b[0m')
+	} else {
 			if (ban7===1){
 				message.channel.send('Cette map a déjà été bannie !')
-		 
+				
 				// log fonctionnalité
 					d = new Date();
 					heureDate(d);
 					user = message.member.user.username;
-	  
+		
 					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 7"','\x1b[31m',' refusé','\x1b[0m')
 			} else {
-				ban7 =1;
-				message.reply('a banni Villa')
-		
-				switch (ban1) {
-					case 1:
-						 sendmap1='~~1 - ' + map1x +'~~';
-					break;
-					case 0:
-						 sendmap1='1 - ' + map1;
-					break;
-				}
-				switch (ban2) {
-					case 1:
-						 sendmap2='~~2 - ' + map2x +'~~';
-					break;
-					case 0:
-						 sendmap2='2 - ' +map2;
-					break;
-				}
-				switch (ban3) {
-					case 1:
-						 sendmap3='~~3 - ' + map3x +'~~';
-					break;
-					case 0:
-						 sendmap3='3 - ' + map3;
-					break;
-				}
-				switch (ban4) {
-					case 1:
-						 sendmap4='~~4 - ' + map4x +'~~';
-					break;
-					case 0:
-						 sendmap4='4 - ' +map4;
-					break;
-				}
-				switch (ban5) {
-					case 1:
-						 sendmap5='~~5 - ' +map5x +'~~';
-					break;
-					case 0:
-						 sendmap5='5 - ' + map5;
-					break;
-				}
-				switch (ban6) {
-					case 1:
-						 sendmap6='~~6 - ' + map6x +'~~';
-					break;
-					case 0:
-						 sendmap6='6 - ' + map6;
-					break;
-				}
-				switch (ban7) {
-					case 1:
-						 sendmap7='~~7 - ' + map7x +'~~';
-					break;
-					case 0:
-						 sendmap7='7 - ' + map7;
-					break;
-				}
+					ban7 =1;
 				
-				message.channel.send(sendmap1+ '\n' +sendmap2+ '\n' +sendmap3+ '\n'+sendmap4+ '\n'+sendmap5+ '\n' +sendmap6+ '\n' +sendmap7+ '\n') 
+					if (message.member.roles.find('name', 'Équipe Bleu')){
+						indication7Role = ':blue_book:';
+						userRole = '(bleu)'
+					} else if (message.member.roles.find('name', 'Équipe Orange')){
+						indication7Role = ':orange_book:';
+						userRole = '(orange)'
+					}
+					message.reply('a banni Villa')
+				
+					switch (ban1) {
+						case 1:
+							sendmap1='~~1 - ' + map1x +'~~' + indication1Role;
+						break;
+						case 0:
+							sendmap1='1 - ' + map1;
+						break;
+					}
+					switch (ban2) {
+						case 1:
+							sendmap2='~~2 - ' + map2x +'~~' + indication2Role;
+						break;
+						case 0:
+							sendmap2='2 - ' +map2;
+						break;
+					}
+					switch (ban3) {
+						case 1:
+							sendmap3='~~3 - ' + map3x +'~~' + indication3Role;
+						break;
+						case 0:
+							sendmap3='3 - ' + map3;
+						break;
+					}
+					switch (ban4) {
+						case 1:
+							sendmap4='~~4 - ' + map4x +'~~' + indication4Role;
+						break;
+						case 0:
+							sendmap4='4 - ' +map4;
+						break;
+					}
+					switch (ban5) {
+						case 1:
+							sendmap5='~~5 - ' +map5x +'~~' + indication5Role;
+						break;
+						case 0:
+							sendmap5='5 - ' + map5;
+						break;
+					}
+					switch (ban6) {
+						case 1:
+							sendmap6='~~6 - ' + map6x +'~~' + indication6Role;
+						break;
+						case 0:
+							sendmap6='6 - ' + map6;
+						break;
+					}
+					switch (ban7) {
+						case 1:
+							sendmap7='~~7 - ' + map7x +'~~' + indication7Role;
+						break;
+						case 0:
+							sendmap7='7 - ' + map7;
+						break;
+					}
+				
+					message.channel.send(sendmap1+ '\n' +sendmap2+ '\n' +sendmap3+ '\n'+sendmap4+ '\n'+sendmap5+ '\n' +sendmap6+ '\n' +sendmap7+ '\n')   
 		
-				// log fonctionnalité
-					d = new Date();
-					heureDate(d);
-					user = message.member.user.username;
-	  
-					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 7"','\x1b[32m',' exécuté','\x1b[0m')
+					// log fonctionnalité
+						d = new Date();
+						heureDate(d);
+						user = message.member.user.username +userRole;
+						
+						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 7"','\x1b[32m',' exécuté','\x1b[0m')
 			}
-		}
 	}
+}
+ 
   
 	// Stop ban des maps + réinitialisation variables ban
 	if (message.content === '!vote stop') {
