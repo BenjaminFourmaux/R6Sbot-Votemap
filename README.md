@@ -21,8 +21,12 @@ Pour faire un vote des maps pour des tournois et matchs Rainbow Six Siege (PC, P
 - En BO1: Même principes que le BO3 mais il faut bannir 6 maps au lieu de 4. La dernière map restant étant la map à jouer.
 
 
+# Fonctionnalités du bot
+
+
 # Notes de versions:
-- 2.2 : (très longtemps) Amélioration de l'affichage des bans (ajout de l'image de la map). + Enregistrement automatique des logs dans un fichier text (logs.txt).
+- 2.3 (très longtemps) Amélioration de l'affichage des bans (ajout de l'image de la map). + Enregistrement automatique des logs dans un fichier text (logs.txt).
+- 2.2 : (bientôt) Ajout de roles (équipe bleu et équipe orange) (les créer directement via les paramètres du serveur Discord) qui permet d'afficher les deux personne qui vote, leur couleur de team pour le premier match. + Ajout d'un petit carré de couleur (derrière la croix) pour indiquer quelle équipe à bannis telle map.
 - 2.1 : Modification de l'affichage des messages (avant = plusieurs message. maintenant = un gros message). + refont de l'algo pour voter.
 - 2.0 : Ajout d'une sesion pour ban (ce qui marque la fin de la beta). + Modification de l'indentation du srcipt
 - Beta 1.6 : Ajout du nom (speudo) de la personne qui exécute une commande dans les logs (sur la console). + Modification des logs (nouveau code couleurs: Jaune = action, Rouge = commande refusé/pas valide, Vert = accepté/valide). + Modification de petits trucs (ortographe, mise en forme...).
