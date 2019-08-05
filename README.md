@@ -23,6 +23,7 @@ Pour faire un vote des maps pour des tournois et matchs Rainbow Six Siege (PC, P
 Vous devez chosir une équipe (équipe bleu et équipe orange). (mettez vous d'aacord avec l'autre équipe pour les équipes (qui commence)). Pour chaque match on change les équipes (l'équipe Bleu du premier match devient l'équipe Orange pour le deuxième et vice-versa).
 C'est à l'équipe Orange de commencer le vote. Une fois les 3 maps restantes l'équipe Orange choisit la première map à jouer et ensuite l'équipe Bleu la deuxième et le decider la dernière map restante.
 - En BO1: Même principes que le BO3 mais il faut bannir 6 maps au lieu de 4. La dernière map restant étant la map à jouer.
+
 __Grâce au bot:__
 Pour afficher la liste des mapsbannisable (ESL rules) tapez: !vote list . Dans le salon prévu à cet effet.
 Pour commencre un vote des map tapez: !vote start .
