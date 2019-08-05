@@ -26,11 +26,17 @@ C'est à l'équipe Orange de commencer le vote. Une fois les 3 maps restantes l'
 
 __Grâce au bot:__
 Pour afficher la liste des maps bannisable (ESL rules) tapez: !vote list . Dans le salon prévu à cet effet.
-Pour commencre un vote des map tapez: !vote start .
+
+Pour commencer un vote des maps tapez: !vote start .
+
 Pour choisir votre équipe tapez: !vote bleu(ou bleu). Ce qui aurras pour effet de vous mettre dans une équipe (indispensable pour fair un vote des map).
+
 Pour bannir une map tapez: !vote ban 1 (ou 2,3,4... (le numéro de la map)).
+
 Pour arrêter le vote tapez: !vote stop .
+
 Pour afficher l'aide tapez: !vote help .
+
 
 # Fonctionnalités du bot
 - Affiche la liste des maps compétitives (ESL Rule). Via la commande !vote list.
