@@ -44,9 +44,12 @@ Pour afficher l'aide tapez: !vote help .
 - Affiche l'aide, la liste des commandes utilisables, la version du bot, comment faire un vote des maps. Via la commande !vote help
 - Lance une "session de ban" ou les différentes équipes peuvent bannir les maps. Via la commande !vote start.
 - Se mettre dans une équipe (soit Équipe Bleu ou Équipe Orange). Via la commande !vote bleu (ou: orange).
+- Met les joueurs dans une équipe (équipe bleu et équipe orange) pour simplifier la lecture des bans et ainsi éviter la triche.
 - Bannir des maps. Via la commande !vote ban (et ne numéro de la map).
 - Stopper la session de ban. Via la commande !vote stop.
 - Afficher des logs (date, heure, nom de l'utilisateur, action faite, résultat) des actions faite avec le bot (pour éviter la triche et le dupage).
+- Empêche le changement d'équipe pendant le vote des maps.
+- Empêche l'exécution de la même commande plusieur fois de suite.
 
 # Notes de versions:
 - 2.5 : (très longtemps) Amélioration de l'affichage des bans (ajout de l'image de la map). + Enregistrement automatique des logs dans un fichier text (logs.txt).
