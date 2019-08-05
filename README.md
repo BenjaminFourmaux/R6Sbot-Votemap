@@ -37,17 +37,17 @@ C'est à l'équipe Orange de commencer le vote. Une fois les 3 maps restantes l'
 # Notes de versions:
 - 2.5 : (très longtemps) Amélioration de l'affichage des bans (ajout de l'image de la map). + Enregistrement automatique des logs dans un fichier text (logs.txt).
 - 2.4 : (longtemps) Optimisation du code (fonction direct pour les logs).
-- 2.3 : (bientôt) Correction du bug lié au couleur des "book" quand une personne d'une autre équipe bannissais une autre map. + __Système ANI-CHEAT:__ Plus la possibilité de changer de team pendant un vote. + __Système ANTI-CHEAT:__ Plus la possibilité de bannir une map sans équipe (= correction du bug). + Enlever les rôles (équipe) de tout les joueurs quand le vote de map est finis (!vote stop).
-- 2.2 : Ajout de roles (équipe bleu et équipe orange) (les créer directement via les paramètres du serveur Discord) qui permet d'afficher la couleur de la team qui à banni une map. Couleur des équipe pour le premier match !. + Ajout d'un petit carré de couleur (derrière la croix) pour indiquer quelle équipe à bannis telle map. + Ajout des nouvelles commandes dans le help. + Optimisation du code et de l'indentage.
-- 2.1 : Modification de l'affichage des messages (avant = plusieurs message. maintenant = un gros message). + refont de l'algo pour voter.
-- 2.0 : Ajout d'une sesion pour ban (ce qui marque la fin de la beta). + Modification de l'indentation du srcipt.
+- 2.3 "battleyes1" : (bientôt) Correction du bug lié au couleur des "book" quand une personne d'une autre équipe bannissais une autre map. + __Système ANI-CHEAT:__ Plus la possibilité de changer de team pendant un vote. + __Système ANTI-CHEAT:__ Plus la possibilité de bannir une map sans équipe (= correction du bug). + Enlever les rôles (équipe) de tout les joueurs quand le vote de map est finis (!vote stop).
+- 2.2 "enrôlé" : Ajout de roles (équipe bleu et équipe orange) (les créer directement via les paramètres du serveur Discord) qui permet d'afficher la couleur de la team qui à banni une map. Couleur des équipe pour le premier match !. + Ajout d'un petit carré de couleur (derrière la croix) pour indiquer quelle équipe à bannis telle map. + Ajout des nouvelles commandes dans le help. + Optimisation du code et de l'indentage.
+- 2.1 "tab" : Modification de l'affichage des messages (avant = plusieurs message. maintenant = un gros message). + refont de l'algo pour voter.
+- 2.0 "sessionA1" : Ajout d'une sesion pour ban (ce qui marque la fin de la beta). + Modification de l'indentation du srcipt.
 - Beta 1.6 : Ajout du nom (speudo) de la personne qui exécute une commande dans les logs (sur la console). + Modification des logs (nouveau code couleurs: Jaune = action, Rouge = commande refusé/pas valide, Vert = accepté/valide). + Modification de petits trucs (ortographe, mise en forme...).
 - Beta 1.5 : Ajout d'une réponse du bot si une commande (!vote) n'existe pas. + Ajout d'un message si une commande ban à déjà était utilisée. + Correction du bug de "empty message" visible dans la console quand la commande help été exectué.
 - Beta 1.4 : Correction des bugs lié aux couleurs (des logs) dans la console. + Ajout d'indications dans la console (statut du bot ...).+ Correction de l'affichage des liens dans la commande help.
 - Beta 1.3 "log" : Ajout de la fonctionnalité de log des actions disponible dans la console. Avec des couleurs !!! + Ajout de la sécance de ban pour le ban 5. Petite erreur d'oublie de ma part.
 - Beta 1.2 : Correction de fautes d'orthographe + ajout de "Comment faire un vote de maps" dans l'aide (!vote help).
 - Beta 1.1 : Optimisation du code de la beta 1.0 en rajoutant des variables (map) afin de faciliter l'ajout, le retrait des maps en fonction des règles ESL.
-- Beta 1.0 : Première version fonctionnelle du Bot. Pour Rainbow Six Siege Y4 S2 et ESL rules Y4 S2.
+- Beta 1.0 "first" : Première version fonctionnelle du Bot. Pour Rainbow Six Siege Y4 S2 et ESL rules Y4 S2.
 
 
 
