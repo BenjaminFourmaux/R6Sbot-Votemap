@@ -25,6 +25,7 @@ C'est à l'équipe Orange de commencer le vote. Une fois les 3 maps restantes l'
 - En BO1: Même principes que le BO3 mais il faut bannir 6 maps au lieu de 4. La dernière map restant étant la map à jouer.
 
 __Grâce au bot:__
+
 Pour afficher la liste des maps bannisable (ESL rules) tapez: !vote list . Dans le salon prévu à cet effet.
 
 Pour commencer un vote des maps tapez: !vote start .
