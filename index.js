@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 bot.login('Insert your token') // token de connexion
 
-version = '2.2'; // Version du script
+version = '2.3 "battleyes1"'; // Version du script
 
 
 bot.on('ready', function (){
@@ -42,6 +42,7 @@ bot.on('ready', function (){
 	 ban6 = 0;
 	 ban7 = 0;
 	 banSession = 0;
+	 statutRole= 0;
 	 
 	 // fonction heure/date
 	 function heureDate() {
@@ -132,18 +133,53 @@ bot.on('message', function (message){
 				console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"bleu"','\x1b[32m',' exécuté','\x1b[0m')
 			
 			if (banSession===1){
-				let role = message.guild.roles.find('name', 'Équipe Bleu')
-				
-				message.member.addRole(role)
-				
-				message.reply("a rejoint l'équipe BLEU :blue_book:")
-				
-				// log fonctionnalité
-					d = new Date();
-					heureDate(d);
+				if (ban1===1 || ban2===1 || ban3===1 || ban4===1 || ban5===1 || ban6===1 || ban7===1){
 					
-	  
-					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m Console','' ,'--->', '\x1b[33m','Role:','\x1b[37m','"bleu"  pour', +user+ '\x1b[32m',' exécuté','\x1b[0m')
+					message.channel.send("Vous n'avez pas le droit de changer de team en cours de ban !")
+					// log fonctionnalité
+						d = new Date();
+						heureDate(d);
+						user= 'Console';
+						
+						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"bleu"','\x1b[31m',' refusé','\x1b[0m', '/!/ session ban en cours','\x1b[0m')
+					
+				} else {
+						if (message.member.roles.find('name', 'Équipe Orange')){
+							
+							let role2 = message.guild.roles.find('name', 'Équipe Orange')
+							message.member.removeRole(role2)
+							
+							let role1 = message.guild.roles.find('name', 'Équipe Bleu')
+								message.member.addRole(role1)
+								statutRole=1;
+								
+								message.reply("a changer d'équipe (orange -> bleu). BLEU :blue_book:")
+
+							
+							// log fonctionnalité
+									d = new Date();
+									heureDate(d);
+									user = message.member.user.username;
+					
+									console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m Console','' ,'--->', '\x1b[33m','Role:','\x1b[37m','"bleu (changement)"  pour', +user+ '\x1b[32m',' exécuté','\x1b[0m')
+						} else {	
+
+								let role = message.guild.roles.find('name', 'Équipe Bleu')
+				
+								message.member.addRole(role)
+								statutRole=1;
+
+					
+								message.reply("a rejoint l'équipe BLEU :blue_book:")
+				
+								// log fonctionnalité
+									d = new Date();
+									heureDate(d);
+									user = message.member.user.username;
+					
+									console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m Console','' ,'--->', '\x1b[33m','Role:','\x1b[37m','"bleu"  pour', +user+ '\x1b[32m',' exécuté','\x1b[0m')
+						}
+				}
 				
 			} else {
 				message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
@@ -168,18 +204,52 @@ bot.on('message', function (message){
 				console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"orange"','\x1b[32m',' exécuté','\x1b[0m')
 			
 			if (banSession===1){
-				let role = message.guild.roles.find('name', 'Équipe Orange')
-				
-				message.member.addRole(role)
-				
-				message.reply("a rejoint l'équipe ORANGE :orange_book:")
-				
-				// log fonctionnalité
-					d = new Date();
-					heureDate(d);
+				if (ban1===1 || ban2===1 || ban3===1 || ban4===1 || ban5===1 || ban6===1 || ban7===1){
 					
+					message.channel.send("Vous n'avez pas le droit de changer de team en cours de ban !")
+					// log fonctionnalité
+						d = new Date();
+						heureDate(d);
+						user= 'Console';
+					
+						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"orange"','\x1b[31m',' refusé','\x1b[0m', '/!/ session ban en cours','\x1b[0m')
+					
+				} else {
+						if (message.member.roles.find('name', 'Équipe Bleu')){
+							
+							let role2 = message.guild.roles.find('name', 'Équipe Bleu')
+							message.member.removeRole(role2)
+							
+							let role1 = message.guild.roles.find('name', 'Équipe Orange')
+								message.member.addRole(role1)
+								statutRole=1;
+								
+								message.reply("a changer d'équipe (bleu -> orange). ORANGE :orange_book:")
+
+							
+							// log fonctionnalité
+									d = new Date();
+									heureDate(d);
+									user = message.member.user.username;
+					
+									console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m Console','' ,'--->', '\x1b[33m','Role:','\x1b[37m','"orange (changement)"  pour', +user+ '\x1b[32m',' exécuté','\x1b[0m')
+						} else {
+					
+								let role = message.guild.roles.find('name', 'Équipe Orange')
+				
+								message.member.addRole(role)
+								statutRole = 1;
+				
+								message.reply("a rejoint l'équipe ORANGE :orange_book:")
+				
+								// log fonctionnalité
+									d = new Date();
+									heureDate(d);
+									user = message.member.user.username;
 	  
-					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m Console','' ,'--->', '\x1b[33m','Role:','\x1b[37m','"orange"  pour', +user+ '\x1b[32m',' exécuté','\x1b[0m')
+									console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m Console','' ,'--->', '\x1b[33m','Role:','\x1b[37m','"orange"  pour', +user+ '\x1b[32m',' exécuté','\x1b[0m')
+						}
+				}
 				
 			} else {
 				message.channel.send("La session de ban n'a pas été lancé. (!vote start)")
@@ -216,6 +286,15 @@ bot.on('message', function (message){
 		
 					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 1"','\x1b[31m',' refusé','\x1b[0m')
 			} else {
+					if (statutRole===0){
+						message.channel.send(" Vous n'avez pas d'équipe. (!vote bleu/orange)")
+						// log fonctionnalité
+							d = new Date();
+							heureDate(d);
+							user = message.member.user.username;
+	  
+							console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 1"','\x1b[31m',' refusé','\x1b[0m', '/!/ no team','\x1b[0m')
+					} else {	
 					ban1 =1;
 				
 					if (message.member.roles.find('name', 'Équipe Bleu')){
@@ -292,6 +371,7 @@ bot.on('message', function (message){
 						user = message.member.user.username +userRole;
 						
 						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 1"','\x1b[32m',' exécuté','\x1b[0m')
+				}
 			}
 	}
 }
@@ -318,8 +398,17 @@ bot.on('message', function (message){
 		
 					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 2"','\x1b[31m',' refusé','\x1b[0m')
 			} else {
+					if (statutRole===0){
+						message.channel.send(" Vous n'avez pas d'équipe. (!vote bleu/orange)")
+						// log fonctionnalité
+							d = new Date();
+							heureDate(d);
+							user = message.member.user.username;
+	  
+							console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 2"','\x1b[31m',' refusé','\x1b[0m', '/!/ no team','\x1b[0m')
+					} else {
 					ban2 =1;
-				
+					
 					if (message.member.roles.find('name', 'Équipe Bleu')){
 						indication2Role = ':blue_book:';
 						userRole = '(bleu)'
@@ -394,6 +483,7 @@ bot.on('message', function (message){
 						user = message.member.user.username +userRole;
 						
 						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 2"','\x1b[32m',' exécuté','\x1b[0m')
+				}
 			}
 	}
 }
@@ -420,6 +510,15 @@ bot.on('message', function (message){
 		
 					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 3"','\x1b[31m',' refusé','\x1b[0m')
 			} else {
+					if (statutRole===0){
+						message.channel.send(" Vous n'avez pas d'équipe. (!vote bleu/orange)")
+						// log fonctionnalité
+							d = new Date();
+							heureDate(d);
+							user = message.member.user.username;
+	  
+							console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 3"','\x1b[31m',' refusé','\x1b[0m', '/!/ no team','\x1b[0m')
+					} else {
 					ban3 =1;
 				
 					if (message.member.roles.find('name', 'Équipe Bleu')){
@@ -496,6 +595,7 @@ bot.on('message', function (message){
 						user = message.member.user.username +userRole;
 						
 						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 3"','\x1b[32m',' exécuté','\x1b[0m')
+				}
 			}
 	}
 }
@@ -522,6 +622,15 @@ bot.on('message', function (message){
 		
 					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 4"','\x1b[31m',' refusé','\x1b[0m')
 			} else {
+					if (statutRole===0){
+						message.channel.send(" Vous n'avez pas d'équipe. (!vote bleu/orange)")
+						// log fonctionnalité
+							d = new Date();
+							heureDate(d);
+							user = message.member.user.username;
+	  
+							console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 4"','\x1b[31m',' refusé','\x1b[0m', '/!/ no team','\x1b[0m')
+					} else {
 					ban4 =1;
 				
 					if (message.member.roles.find('name', 'Équipe Bleu')){
@@ -598,6 +707,7 @@ bot.on('message', function (message){
 						user = message.member.user.username +userRole;
 						
 						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 4"','\x1b[32m',' exécuté','\x1b[0m')
+				}
 			}
 	}
 }
@@ -624,6 +734,15 @@ bot.on('message', function (message){
 		
 					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 5"','\x1b[31m',' refusé','\x1b[0m')
 			} else {
+					if (statutRole===0){
+						message.channel.send(" Vous n'avez pas d'équipe. (!vote bleu/orange)")
+						// log fonctionnalité
+							d = new Date();
+							heureDate(d);
+							user = message.member.user.username;
+	  
+							console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 5"','\x1b[31m',' refusé','\x1b[0m', '/!/ no team','\x1b[0m')
+					} else {
 					ban5 =1;
 				
 					if (message.member.roles.find('name', 'Équipe Bleu')){
@@ -700,6 +819,7 @@ bot.on('message', function (message){
 						user = message.member.user.username +userRole;
 						
 						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 5"','\x1b[32m',' exécuté','\x1b[0m')
+				}
 			}
 	}
 }
@@ -726,6 +846,15 @@ bot.on('message', function (message){
 		
 					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 6"','\x1b[31m',' refusé','\x1b[0m')
 			} else {
+					if (statutRole===0){
+						message.channel.send(" Vous n'avez pas d'équipe. (!vote bleu/orange)")
+						// log fonctionnalité
+							d = new Date();
+							heureDate(d);
+							user = message.member.user.username;
+	  
+							console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 6"','\x1b[31m',' refusé','\x1b[0m', '/!/ no team','\x1b[0m')
+					} else {
 					ban6 =1;
 				
 					if (message.member.roles.find('name', 'Équipe Bleu')){
@@ -802,6 +931,7 @@ bot.on('message', function (message){
 						user = message.member.user.username +userRole;
 						
 						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 6"','\x1b[32m',' exécuté','\x1b[0m')
+				}
 			}
 	}
 }
@@ -828,6 +958,15 @@ bot.on('message', function (message){
 		
 					console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 7"','\x1b[31m',' refusé','\x1b[0m')
 			} else {
+					if (statutRole===0){
+						message.channel.send(" Vous n'avez pas d'équipe. (!vote bleu/orange)")
+						// log fonctionnalité
+							d = new Date();
+							heureDate(d);
+							user = message.member.user.username;
+	  
+							console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 7"','\x1b[31m',' refusé','\x1b[0m', '/!/ no team','\x1b[0m')
+					} else {
 					ban7 =1;
 				
 					if (message.member.roles.find('name', 'Équipe Bleu')){
@@ -904,6 +1043,7 @@ bot.on('message', function (message){
 						user = message.member.user.username +userRole;
 						
 						console.log('['+ dformat +']'+'\x1b[33m','User:','\x1b[0m' +user+'','' ,'--->', '\x1b[33m','Commande:','\x1b[37m','"ban 7"','\x1b[32m',' exécuté','\x1b[0m')
+				}
 			}
 	}
 }
@@ -933,7 +1073,7 @@ bot.on('message', function (message){
 	// Help
 	if (message.content === '!vote help') {
 		message.channel.send('R6Sbot Votemap V:' + version)
-		message.channel.send('\nComment faire un vote de map -> <https://tinyurl.com/r6sbot-votemap-comment-faire> \nVoici la liste des commandes: \nPour les commandes de ce bot TOUJOURS commencer par : !vote . \n- Aide: !vote help \n- Liste des maps: !vote list \n- Lancer un vote: !vote start \n- Bannir une map: !vote ban [numéro de la map] \n- Arrêter un vote: !vote stop \n \nGo follow <https://www.twitter.com/Benwarrior37>')
+		message.channel.send('\nComment faire un vote de map -> <https://tinyurl.com/r6sbot-votemap-comment-faire> \nVoici la liste des commandes: \nPour les commandes de ce bot TOUJOURS commencer par : !vote . \n- Aide: !vote help \n- Liste des maps: !vote list \n- Lancer un vote: !vote start \n Chosir une équipe: !vote bleu/orange \n- Bannir une map: !vote ban [numéro de la map] \n- Arrêter un vote: !vote stop \n \nGo follow <https://www.twitter.com/Benwarrior37>')
 			
 		// log fonctionnalité
 			d = new Date();
