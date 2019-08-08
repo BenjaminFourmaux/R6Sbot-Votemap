@@ -53,15 +53,15 @@ Pour afficher l'aide tapez: !vote help .
 
 # Notes de versions:
 
-La version 3 rajout d'autres fonctionnalité non indispensable à bot
+La version 3 rajout d'autres fonctionnalités non indispensable à bot
 ----------------------------------------------------------------------------------------------------------------------------------------
 - 3.2 : (très longtemps) Amélioration de l'affichage des bans (ajout de l'image de la map). + Enregistrement automatique des logs dans un fichier text (logs.txt). 
 - 3.1 "battleyes2" : (dans longtemps) __ANTI-CHEAT:__ Ajout d'un système qui empêche de bannir plus de map que le type de partie choisis. + Modification de la commande (!vote start). Maintenant pour selectionner un type de partie (BO1 ou BO3) faite: "!vote start bo1" ou "!vote start bo3" (BO1 = 6 maps à bannir et BO3 = 4 maps à bannir).
 - 3.0 : (lontemps)__ANTI-CHEAT:__ Ajout du système "ping pong" qui permet aux équipes de voter chacune leur tour ainsi éviter la triche
 
-La version 1 et 2 bot 
+La version 1 et 2: bot 
 ----------------------------------------------------------------------------------------------------------------------------------------
-- 2.5 :(help me please pour ça) Les rôles (équipe bleu et orange) sont maintenant enlevé dès la commande !vote stop éxécuté Pour tous les membres ayant ces rôles.
+- 2.5 : (help me please pour ça) Les rôles (équipe bleu et orange) sont maintenant enlevé dès la commande !vote stop éxécuté Pour tous les membres ayant ces rôles.
 - 2.4 : Correction du bug lié à l'affecttion de rôles (" (node:30680) DeprecationWarning: Collection#find: pass a function instead" visible dans la console).
 - 2.3 "battleyes1" : Correction du bug lié au couleur des "book" quand une personne d'une autre équipe bannissais une autre map. + __Système ANTI-CHEAT:__ Plus la possibilité de changer de team pendant un vote. + __Système ANTI-CHEAT:__ Plus la possibilité de bannir une map sans équipe (= correction du bug). + __ANTI-CHEAT:__ On peut désormer changer de rôle avant le ban des maps. Changer de role enlèveras l'autre rôle (= correction du bug).
 - 2.2 "enrôlé" : Ajout de roles (équipe bleu et équipe orange) (les créer directement via les paramètres du serveur Discord) qui permet d'afficher la couleur de la team qui à banni une map. Couleur des équipe pour le premier match !. + Ajout d'un petit carré de couleur (derrière la croix) pour indiquer quelle équipe à bannis telle map. + Ajout des nouvelles commandes dans le help. + Optimisation du code et de l'indentage.
