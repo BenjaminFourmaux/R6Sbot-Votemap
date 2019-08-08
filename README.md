@@ -32,7 +32,7 @@ Pour commencer un vote des maps tapez: !vote start .
 
 Pour choisir votre équipe tapez: !vote bleu(ou bleu). Ce qui aurras pour effet de vous mettre dans une équipe (indispensable pour fair un vote des map).
 
-Pour bannir une map tapez: !vote ban 1 (ou 2,3,4... (le numéro de la map)).
+Pour bannir une map tapez: !vote ban 1 (ou 2,3,4... (le numéro de la map)). Une map banni par équipe ET par tour (une map chacune).
 
 Pour arrêter le vote tapez: !vote stop .
 
@@ -52,11 +52,14 @@ Pour afficher l'aide tapez: !vote help .
 - Empêche l'exécution de la même commande plusieur fois de suite.
 
 # Notes de versions:
+
+La version 3 rajout d'autres fonctionnalité non indispensable à bot
+----------------------------------------------------------------------------------------------------------------------------------------
 - 3.2 : (très longtemps) Amélioration de l'affichage des bans (ajout de l'image de la map). + Enregistrement automatique des logs dans un fichier text (logs.txt). 
 - 3.1 "battleyes2" : (dans longtemps) __ANTI-CHEAT:__ Ajout d'un système qui empêche de bannir plus de map que le type de partie choisis. + Modification de la commande (!vote start). Maintenant pour selectionner un type de partie (BO1 ou BO3) faite: "!vote start bo1" ou "!vote start bo3" (BO1 = 6 maps à bannir et BO3 = 4 maps à bannir).
 - 3.0 : (lontemps)__ANTI-CHEAT:__ Ajout du système "ping pong" qui permet aux équipes de voter chacune leur tour ainsi éviter la triche
 
-La version 3 rajout d'autres fonctionnalité non indispensable à bot
+La version 1 et 2 bot 
 ----------------------------------------------------------------------------------------------------------------------------------------
 - 2.5 :(help me please pour ça) Les rôles (équipe bleu et orange) sont maintenant enlevé dès la commande !vote stop éxécuté Pour tous les membres ayant ces rôles.
 - 2.4 : Correction du bug lié à l'affecttion de rôles (" (node:30680) DeprecationWarning: Collection#find: pass a function instead" visible dans la console).
