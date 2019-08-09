@@ -3,7 +3,7 @@ const Discord = require('discord.js')
 const bot = new Discord.Client()
 bot.login('Insert your token') // token de connexion
 
-version = '2.4'; // Version du script
+version = '2.5'; // Version du script
 
 
 bot.on('ready', function (){
@@ -306,7 +306,7 @@ bot.on('message', function (message){
 						indication1Role = ':orange_book:';
 						userRole = '(orange)'
 					}
-					message.reply('a banni Club House')
+					message.reply('a banni ' + map1)
 				
 					switch (ban1) {
 						case 1:
@@ -418,7 +418,7 @@ bot.on('message', function (message){
 						indication2Role = ':orange_book:';
 						userRole = '(orange)'
 					}
-					message.reply('a banni Consulat')
+					message.reply('a banni ' + map2)
 				
 					switch (ban1) {
 						case 1:
@@ -530,7 +530,7 @@ bot.on('message', function (message){
 						indication3Role = ':orange_book:';
 						userRole = '(orange)'
 					}
-					message.reply('a banni Banque')
+					message.reply('a banni ' + map3)
 				
 					switch (ban1) {
 						case 1:
@@ -642,7 +642,7 @@ bot.on('message', function (message){
 						indication4Role = ':orange_book:';
 						userRole = '(orange)'
 					}
-					message.reply('a banni Café Dostoyevsky')
+					message.reply('a banni ' + map4)
 				
 					switch (ban1) {
 						case 1:
@@ -754,7 +754,7 @@ bot.on('message', function (message){
 						indication5Role = ':orange_book:';
 						userRole = '(orange)'
 					}
-					message.reply('a banni Frontière')
+					message.reply('a banni ' + map5)
 				
 					switch (ban1) {
 						case 1:
@@ -866,7 +866,7 @@ bot.on('message', function (message){
 						indication6Role = ':orange_book:';
 						userRole = '(orange)'
 					}
-					message.reply('a banni Litoral')
+					message.reply('a banni ' + map6)
 				
 					switch (ban1) {
 						case 1:
@@ -978,7 +978,7 @@ bot.on('message', function (message){
 						indication7Role = ':orange_book:';
 						userRole = '(orange)'
 					}
-					message.reply('a banni Villa')
+					message.reply('a banni ' + map7)
 				
 					switch (ban1) {
 						case 1:
@@ -1062,6 +1062,7 @@ bot.on('message', function (message){
 			 ban6 = 0;
 			 ban7 = 0;
 			 banSession = 0;
+			 
 			 
 			 
 			 
