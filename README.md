@@ -61,7 +61,7 @@ La version 3 rajout d'autres fonctionnalités non indispensable au bot
 
 La version 1 et 2: bot 
 ----------------------------------------------------------------------------------------------------------------------------------------
-- 2.7 : (help me please pour ça) Les rôles (équipe bleu et orange) sont maintenant enlevé dès la commande !vote stop éxécuté Pour tous les membres ayant ces rôles.
+- 2.7 : (help me please pour ça) Les rôles (équipe bleu et orange) sont maintenant enlevé dès la commande !vote stop éxécuté Pour tous les membres ayant ces rôles.(askip impossible car si non spam API).
 - 2.6 : (bientôt) __ANTI-CHEAT:__ Ajout du système "ping pong" qui permet aux équipes de voter chacune leur tour ainsi éviter la triche.
 - 2.5 : Mise en place de variable permettant de changer le nom de la map (si changement mappool ESL) plus simplement.
 - 2.4 : Correction du bug lié à l'affecttion de rôles (" (node:30680) DeprecationWarning: Collection#find: pass a function instead" visible dans la console).
