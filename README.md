@@ -61,8 +61,9 @@ La version 3 rajout d'autres fonctionnalités non indispensable à bot
 
 La version 1 et 2: bot 
 ----------------------------------------------------------------------------------------------------------------------------------------
-- 2.6 : (help me please pour ça) Les rôles (équipe bleu et orange) sont maintenant enlevé dès la commande !vote stop éxécuté Pour tous les membres ayant ces rôles.
-- 2.5 : (bientôt) __ANTI-CHEAT:__ Ajout du système "ping pong" qui permet aux équipes de voter chacune leur tour ainsi éviter la triche.
+- 2.7 : (help me please pour ça) Les rôles (équipe bleu et orange) sont maintenant enlevé dès la commande !vote stop éxécuté Pour tous les membres ayant ces rôles.
+- 2.6 : (bientôt) __ANTI-CHEAT:__ Ajout du système "ping pong" qui permet aux équipes de voter chacune leur tour ainsi éviter la triche.
+- 2.5 : Mise en place de variable permettant de changer le nom de la map (si changement mappool ESL) plus simplement.
 - 2.4 : Correction du bug lié à l'affecttion de rôles (" (node:30680) DeprecationWarning: Collection#find: pass a function instead" visible dans la console).
 - 2.3 "battleyes1" : Correction du bug lié au couleur des "book" quand une personne d'une autre équipe bannissais une autre map. + __Système ANTI-CHEAT:__ Plus la possibilité de changer de team pendant un vote. + __Système ANTI-CHEAT:__ Plus la possibilité de bannir une map sans équipe (= correction du bug). + __ANTI-CHEAT:__ On peut désormer changer de rôle avant le ban des maps. Changer de role enlèveras l'autre rôle (= correction du bug).
 - 2.2 "enrôlé" : Ajout de roles (équipe bleu et équipe orange) (les créer directement via les paramètres du serveur Discord) qui permet d'afficher la couleur de la team qui à banni une map. Couleur des équipe pour le premier match !. + Ajout d'un petit carré de couleur (derrière la croix) pour indiquer quelle équipe à bannis telle map. + Ajout des nouvelles commandes dans le help. + Optimisation du code et de l'indentage.
