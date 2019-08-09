@@ -53,7 +53,7 @@ Pour afficher l'aide tapez: !vote help .
 
 # Notes de versions:
 
-La version 3 rajout d'autres fonctionnalités non indispensable à bot
+La version 3 rajout d'autres fonctionnalités non indispensable au bot
 ----------------------------------------------------------------------------------------------------------------------------------------
 - 3.2 : (très longtemps) Amélioration de l'affichage des bans (ajout de l'image de la map). + Enregistrement automatique des logs dans un fichier text (logs.txt). 
 - 3.1 "music": Le bot diffuse la musique du 6 Invitationnal dans un salon audio.
