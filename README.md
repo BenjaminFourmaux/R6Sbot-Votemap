@@ -55,9 +55,10 @@ Pour afficher l'aide tapez: !vote help .
 
 La version 3 rajout d'autres fonctionnalités non indispensable au bot
 ----------------------------------------------------------------------------------------------------------------------------------------
-- 3.2 : (très longtemps) Amélioration de l'affichage des bans (ajout de l'image de la map). + Enregistrement automatique des logs dans un fichier text (logs.txt). 
-- 3.1 "music": Le bot diffuse la musique du 6 Invitationnal dans un salon audio.
-- 3.0  "battleyes2" : (dans longtemps) __ANTI-CHEAT:__ Ajout d'un système qui empêche de bannir plus de map que le type de partie choisis. + Modification de la commande (!vote start). Maintenant pour selectionner un type de partie (BO1 ou BO3) faite: "!vote start bo1" ou "!vote start bo3" (BO1 = 6 maps à bannir et BO3 = 4 maps à bannir).
+- 3.5 : (très longtemps) Amélioration de l'affichage des bans (ajout de l'image de la map). + Enregistrement automatique des logs dans un fichier text (logs.txt). 
+- 3.4 "music": Le bot diffuse la musique du 6 Invitationnal dans un salon audio.
+- 3.3  "battleyes2" : (dans longtemps) __ANTI-CHEAT:__ Ajout d'un système qui empêche de bannir plus de map que le type de partie choisis. + Modification de la commande (!vote start). Maintenant pour selectionner un type de partie (BO1 ou BO3) faite: "!vote start bo1" ou "!vote start bo3" (BO1 = 6 maps à bannir et BO3 = 4 maps à bannir).
+- 3.0 : (bientôt) Modification du bot pour les nouvelles règles ESL (ban-ban, pick-pick, ban-ban).
 
 La version 1 et 2: bot 
 ----------------------------------------------------------------------------------------------------------------------------------------
