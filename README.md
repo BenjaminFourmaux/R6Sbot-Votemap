@@ -55,10 +55,8 @@ Pour afficher l'aide tapez: !vote help .
 
 La version stable actuelle 2.5
 ----------------------------------------------------------------------------------------------------------------------------
-- 3.5 : (très longtemps) Amélioration de l'affichage des bans (ajout de l'image de la map). + Enregistrement automatique des logs dans un fichier text (logs.txt). 
-- 3.4 "music": Le bot diffuse la musique du 6 Invitationnal dans un salon audio.
-- 3.3  "battleyes2" : (dans longtemps) __ANTI-CHEAT:__ Ajout d'un système qui empêche de bannir plus de map que le type de partie choisis. + Modification de la commande (!vote start). Maintenant pour selectionner un type de partie (BO1 ou BO3) faite: "!vote start bo1" ou "!vote start bo3" (BO1 = 6 maps à bannir et BO3 = 4 maps à bannir).
-- 3.0 : (bientôt) Modification du bot pour les nouvelles règles ESL (ban-ban, pick-pick, ban-ban).
+- 3.1: (bientôt) Mise à jour des maps et de nouvelles reglès ESL.
+- 3.0: (bientôt) Ajout de fonctions afin d'alléger le code  + mise à jour du code car changement dans l'API discrod.js
 
 --------------------------------------------------------------------------------------------------------------------
 - 2.5 : Mise en place de variable permettant de changer le nom de la map (si changement mappool ESL) plus simplement.
