@@ -8,7 +8,7 @@
 console.log('Connexion à discordapp.com en cours...')
 const Discord = require('discord.js')
 const bot = new Discord.Client()
-bot.login('NDU3NjE4OTU3MTIyMjczMzAx.Xp-TsQ.y0koQ6vdWAYJvK7xZVziZPrhMVI') // token de connexion
+bot.login('INSERT YOUR TOKEN HERE') // token de connexion
 
 version = '3.0'; // Version du script
 
