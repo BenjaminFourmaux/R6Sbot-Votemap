@@ -53,7 +53,7 @@ Pour afficher l'aide tapez: !vote help .
 
 # Notes de versions:
 
-La version stable actuelle 2.5
+La version stable actuelle 3.0
 ----------------------------------------------------------------------------------------------------------------------------
 - 3.2: (dans 1 semaine) Miantenant quand le ban est arrété (!vote stop) tous les roles ("Équipe Bleu" et "Équipe Orange") sont enlever de tous les joueurs.
 - 3.1: (bientôt) Mise à jour des maps et de nouvelles reglès ESL.
