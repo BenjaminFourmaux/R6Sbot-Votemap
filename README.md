@@ -56,9 +56,10 @@ Pour afficher l'aide tapez: !vote help .
 La version stable actuelle 2.5
 ----------------------------------------------------------------------------------------------------------------------------
 - 3.1: (bientôt) Mise à jour des maps et de nouvelles reglès ESL.
-- 3.0: (bientôt) Ajout de fonctions afin d'alléger le code  + mise à jour du code car changement dans l'API discrod.js
 
 --------------------------------------------------------------------------------------------------------------------
+- 3.0 "discord.js V12": Refonte du bot
+* dede
 - 2.5 : Mise en place de variable permettant de changer le nom de la map (si changement mappool ESL) plus simplement.
 - 2.4 : Correction du bug lié à l'affecttion de rôles (" (node:30680) DeprecationWarning: Collection#find: pass a function instead" visible dans la console).
 - 2.3 "battleyes1" : Correction du bug lié au couleur des "book" quand une personne d'une autre équipe bannissais une autre map. + __Système ANTI-CHEAT:__ Plus la possibilité de changer de team pendant un vote. + __Système ANTI-CHEAT:__ Plus la possibilité de bannir une map sans équipe (= correction du bug). + __ANTI-CHEAT:__ On peut désormer changer de rôle avant le ban des maps. Changer de role enlèveras l'autre rôle (= correction du bug).
