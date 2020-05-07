@@ -1,16 +1,16 @@
 /**
  *  @author: Benjamin Fourmaux Beruet
- *  @version: 3.0
- *  date: 22/04/2020
+ *  @version: 3.1
+ *  date: 07/05/2020
  * */
 
 // Connexion du bot à l'API discord
 console.log('Connexion à discordapp.com en cours...')
 const Discord = require('discord.js')
 const bot = new Discord.Client()
-bot.login('INSERT YOUR TOKEN HERE') // token de connexion
+bot.login('INSERT YOUR TOKEN') // token de connexion
 
-version = '3.0'; // Version du script
+version = '3.1'; // Version du bot
 
 
 // Initialisation du bot
@@ -27,10 +27,10 @@ bot.on('ready', function () {
 // initialisation des variables map
 map1 = "Club House";
 map2 = "Consulat";
-map3 = "Banque";
-map4 = "Café Dostoyevsky";
-map5 = "Frontière";
-map6 = "Litoral";
+map3 = "Café Dostoyevsky";
+map4 = "Frontière";
+map5 = "Litoral";
+map6 = "Parc d'attractions";
 map7 = "Villa";
 
 
@@ -655,7 +655,7 @@ bot.on('message', function (message) {
 
 	// Help
 	function help() {
-		message.channel.send('R6Sbot Votemap V:' + version)
+		message.channel.send("R6Sbot Votemap V: " + version)
 		message.channel.send('\nComment faire un vote de map -> <https://tinyurl.com/r6sbot-votemap-comment-faire> \nVoici la liste des commandes: \nPour les commandes de ce bot TOUJOURS commencer par : !vote . \n- Aide: !vote help \n- Liste des maps: !vote list \n- Lancer un vote: !vote start \n Chosir une équipe: !vote bleu/orange \n- Bannir une map: !vote ban [numéro de la map] \n- Arrêter un vote: !vote stop \n \nGo follow <https://www.twitter.com/Benwarrior37>')
 
 		// log fonctionnalité
