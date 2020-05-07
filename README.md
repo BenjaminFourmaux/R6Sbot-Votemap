@@ -53,10 +53,10 @@ Pour afficher l'aide tapez: !vote help .
 
 # Notes de versions:
 
-La version stable actuelle 3.0
+La version stable actuelle 3.1
 ----------------------------------------------------------------------------------------------------------------------------
-- 3.3: (longtemps) Maintenant quand le ban est arrété (!vote stop) tous les roles ("Équipe Bleu" et "Équipe Orange") sont enlever de tous les joueurs.
-- 3.2 (bientôt) "Tuto": Création d'une vidéo tutorielle afin d'expliquer comment utiliser le bot
+- 3.3 (longtemps) "Tuto": Création d'une vidéo tutorielle afin d'expliquer comment utiliser le bot
+- 3.2 (bientôt) "Remove Role": Maintenant quand le ban est arrété (!vote stop) tous les roles ("Équipe Bleu" et "Équipe Orange") sont enlever de tous les joueurs.
 
 --------------------------------------------------------------------------------------------------------------------
 - 3.1: Mise à jour des maps et de nouvelles reglès ESL.
