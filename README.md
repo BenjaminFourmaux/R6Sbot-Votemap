@@ -55,10 +55,11 @@ Pour afficher l'aide tapez: !vote help .
 
 La version stable actuelle 3.0
 ----------------------------------------------------------------------------------------------------------------------------
-- 3.2: (dans 1 semaine) Miantenant quand le ban est arrété (!vote stop) tous les roles ("Équipe Bleu" et "Équipe Orange") sont enlever de tous les joueurs.
-- 3.1: (bientôt) Mise à jour des maps et de nouvelles reglès ESL.
+- 3.3: (longtemps) Maintenant quand le ban est arrété (!vote stop) tous les roles ("Équipe Bleu" et "Équipe Orange") sont enlever de tous les joueurs.
+- 3.2 (bientôt) "Tuto": Création d'une vidéo tutorielle afin d'expliquer comment utiliser le bot
 
 --------------------------------------------------------------------------------------------------------------------
+- 3.1: Mise à jour des maps et de nouvelles reglès ESL.
 - 3.0 "discord.js V12": Refonte du bot
   - Mise à niveau du script pour la compatibilité avec la V12 de Discord.js
   - Optimisation du code (de 1108 lignes à 666 (anté christ))
