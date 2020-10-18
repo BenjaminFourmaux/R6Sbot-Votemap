@@ -60,7 +60,8 @@ La version stable actuelle 3.1
   - Mise à jour des maps (map pool ESL).
   - Le ban est désormé comforme aux règlés ESL (ban ban pick pick)(que je n'approuve pas!!)
   - Maintenant quand le ban est arrété (!vote stop) tous les roles ("Équipe Bleu" et "Équipe Orange") sont enlever de tous les joueurs.
-  - Le vote est arréte (!vote stop) que si une session ban à été lancé
+  - Le vote est arréte (!vote stop) que si une session ban à été lancé.
+  - Diverses optimisations du code
 
 --------------------------------------------------------------------------------------------------------------------
 - 3.1: Mise à jour des maps et de nouvelles reglès ESL.
