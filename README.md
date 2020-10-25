@@ -1,7 +1,7 @@
 # R6Sbot-Votemap
 Un bot Discord pour faire des ban de map pour des match sur le jeu Rainbow Six Siege
 
-# Notes de versions:
+# Versions:
 
 La version stable actuelle 3.1
 
