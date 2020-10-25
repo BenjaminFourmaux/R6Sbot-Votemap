@@ -50,6 +50,7 @@ Pour afficher l'aide tapez: !vote help .
 - Afficher des logs (date, heure, nom de l'utilisateur, action faite, résultat) des actions faite avec le bot (pour éviter la triche et le dupage).
 - Empêche le changement d'équipe pendant le vote des maps.
 - Empêche l'exécution de la même commande plusieur fois de suite.
+- Versions min: Versions sans la fonctionnalité de log
 
 # Notes de versions:
 
