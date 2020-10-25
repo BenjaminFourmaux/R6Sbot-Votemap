@@ -1,5 +1,5 @@
 # R6Sbot-Votemap
-Un bot Discord pour faire des ban de map pour des parties sur le jeu Rainbow Six Siege
+Un bot Discord pour faire des ban de map pour des matchs sur le jeu Rainbow Six Siege
 
 
 pré-requis:
@@ -55,15 +55,18 @@ Pour afficher l'aide tapez: !vote help .
 
 La version stable actuelle 3.1
 ----------------------------------------------------------------------------------------------------------------------------
-- 3.3 (longtemps) "Tuto": Création d'une vidéo tutorielle afin d'expliquer comment utiliser le bot
-- 3.2 (bientôt) "Remove Role": 
+- 4.1 (longtemps) "Tuto": Création d'une vidéo tutorielle afin d'expliquer comment utiliser le bot
+- 4.0 (bientôt) "Refonte du coeur": Refonte du coeur du bot
+  - Ajout de plusieurs test qui permet l'anti cheat (test si le ban à été lancé, si le joueur à bien une équipe ...).
+  - Maintenant quand le ban est arrété (!vote stop) tous les roles ("Équipe Bleu" et "Équipe Orange") sont enlever de tous les joueurs.
+  - Permet la flexibilité de l'app (pour faire des b01, b03, b05 par exemple).
+  
+--------------------------------------------------------------------------------------------------------------------
+- 3.2 (instable): 
   - Mise à jour des maps (map pool ESL).
   - Le ban est désormé comforme aux règlés ESL (ban ban pick pick)(que je n'approuve pas!!)
-  - Maintenant quand le ban est arrété (!vote stop) tous les roles ("Équipe Bleu" et "Équipe Orange") sont enlever de tous les joueurs.
   - Le vote est arréte (!vote stop) que si une session ban à été lancé.
   - Diverses optimisations du code
-
---------------------------------------------------------------------------------------------------------------------
 - 3.1: Mise à jour des maps et de nouvelles reglès ESL.
 - 3.0 "discord.js V12": Refonte du bot
   - Mise à niveau du script pour la compatibilité avec la V12 de Discord.js
