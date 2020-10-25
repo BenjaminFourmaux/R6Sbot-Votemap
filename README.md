@@ -55,7 +55,8 @@ Pour afficher l'aide tapez: !vote help .
 
 La version stable actuelle 3.1
 ----------------------------------------------------------------------------------------------------------------------------
-- 4.1 (longtemps) "Tuto": Création d'une vidéo tutorielle afin d'expliquer comment utiliser le bot
+- 4.2 (longtemps) "Tuto": Création d'une vidéo tutorielle afin d'expliquer comment utiliser le bot.
+- 4.1 (plus tard): Vérification s'il y a 2 équipe pour voter.
 - 4.0 (bientôt) "Refonte du coeur": Refonte du coeur du bot
   - Ajout de plusieurs test qui permet l'anti cheat (test si le ban à été lancé, si le joueur à bien une équipe ...).
   - Maintenant quand le ban est arrété (!vote stop) tous les roles ("Équipe Bleu" et "Équipe Orange") sont enlever de tous les joueurs.
