@@ -19,38 +19,38 @@ Si vous souhaitez obtenir de l'aide (commandes ...) entrer " !vote help" dans un
 Pour faire un vote des maps pour des tournois et matchs Rainbow Six Siege (PC, PS4 et Xbox).
 2 personnes (les deux représentants/chefs des deux équipes qui s'affrontent)(+1 un admin si besoin).
 
-- En BO3: il vous suffit de bannir un totale de 4 maps pour qu'il en reste 3. 
-Vous devez chosir une équipe (équipe bleu et équipe orange). (mettez vous d'aacord avec l'autre équipe pour les équipes (qui commence)). Pour chaque match on change les équipes (l'équipe Bleu du premier match devient l'équipe Orange pour le deuxième et vice-versa).
-C'est à l'équipe Orange de commencer le vote. Une fois les 3 maps restantes l'équipe Orange choisit la première map à jouer et ensuite l'équipe Bleu la deuxième et le decider la dernière map restante.
-- En BO1: Même principes que le BO3 mais il faut bannir 6 maps au lieu de 4. La dernière map restant étant la map à jouer.
+-Le principe est le BAN PICK & BAN. Les deux équipes commencent à bannir 2 maps puis à en choisir 2 sur lesquelles elle s'affronterons et ensuite bannir 2 maps pour qu'il en reste plus qu'un (le decider).
 
 __Grâce au bot:__
 
-Pour afficher la liste des maps bannisable (ESL rules) tapez: !vote list . Dans le salon prévu à cet effet.
+Pour afficher la liste des maps veto (ESL rules) tapez: !vote list.
 
-Pour commencer un vote des maps tapez: !vote start .
+Pour commencer un vote des maps tapez: !vote start.
 
-Pour choisir votre équipe tapez: !vote bleu(ou bleu). Ce qui aurras pour effet de vous mettre dans une équipe (indispensable pour fair un vote des map).
+Pour choisir votre équipe tapez: !vote bleu(ou orange). Ce qui aurras pour effet de vous mettre dans une équipe (indispensable pour faire un vote des maps).
 
-Pour bannir une map tapez: !vote ban 1 (ou 2,3,4... (le numéro de la map)). Une map banni par équipe ET par tour (une map chacune).
+Pour bannir une map tapez: !vote ban 1 (ou 2,3,4... (le numéro de la map)). 2 maps bannis par équipe.
 
-Pour arrêter le vote tapez: !vote stop .
+Pour choisir une map tapez: !vote pick 1 (ou 2,3,4...(le numéro de la map))? Une est Une seul map peut être bannis par une équipe.
 
-Pour afficher l'aide tapez: !vote help .
+Pour arrêter le vote tapez: !vote stop.
+
+Pour afficher l'aide tapez: !vote help.
 
 
 # Fonctionnalités du bot
-- Affiche la liste des maps compétitives (ESL Rule). Via la commande !vote list.
-- Affiche l'aide, la liste des commandes utilisables, la version du bot, comment faire un vote des maps. Via la commande !vote help
-- Lance une "session de ban" ou les différentes équipes peuvent bannir les maps. Via la commande !vote start.
+- Affiche la liste des maps compétitives (ESL Rule). _Via la commande !vote list._
+- Affiche l'aide, la liste des commandes utilisables, la version du bot, comment faire un vote des maps. _Via la commande !vote help._
+- Lance une "session de vote" ou les différentes équipes peuvent bannir les maps. Via la commande !vote start.
 - Se mettre dans une équipe (soit Équipe Bleu ou Équipe Orange). Via la commande !vote bleu (ou: orange).
 - Met les joueurs dans une équipe (équipe bleu et équipe orange) pour simplifier la lecture des bans et ainsi éviter la triche.
-- Bannir des maps. Via la commande !vote ban (et ne numéro de la map).
-- Stopper la session de ban. Via la commande !vote stop.
-- Afficher des logs (date, heure, nom de l'utilisateur, action faite, résultat) des actions faite avec le bot (pour éviter la triche et le dupage).
+- Bannir des maps. _Via la commande !vote ban (et ne numéro de la map)._
+- Choisir des maps. _Via la commande !vote pick (et le numéro de la map)._
+- Stopper la session de ban. _Via la commande !vote stop._
+- Afficher les logs (date, heure, nom de l'utilisateur, action faite, résultat) des actions faite avec le bot (pour éviter la triche et le dupage).
 - Empêche le changement d'équipe pendant le vote des maps.
 - Empêche l'exécution de la même commande plusieur fois de suite.
-- Versions min: Versions sans la fonctionnalité de log
+- Versions min: Versions allégé sans la fonctionnalité de log et la documentation du code.
 
 # Notes de versions:
 
@@ -58,10 +58,13 @@ La version stable actuelle 3.1
 ----------------------------------------------------------------------------------------------------------------------------
 - 4.2 (longtemps) "Tuto": Création d'une vidéo tutorielle afin d'expliquer comment utiliser le bot.
 - 4.1 (plus tard): Vérification s'il y a 2 équipes pour voter.
-- 4.0 (bientôt) "Refonte du coeur": Refonte du coeur du bot
+- 4.0-min (bientôt) "TheLittleBigOne": version allégé de la v4.0 (sans log console et documentation du code).
+- 4.0 (bientôt) "TheBigOne": Refonte du coeur du bot:
+  - Implémentation du BAN-BAN PICK-PICK BAN-BAN.
   - Ajout de plusieurs test qui permet l'anti cheat (test si le ban à été lancé, si le joueur à bien une équipe ...).
   - Maintenant quand le ban est arrété (!vote stop) tous les roles ("Équipe Bleu" et "Équipe Orange") sont enlever de tous les joueurs.
   - Permet la flexibilité de l'app (pour faire des b01, b03, b05 par exemple).
+  - Diverse corrections de bugs et optimisation du code.
   
 --------------------------------------------------------------------------------------------------------------------
 - 3.2 (instable): 
