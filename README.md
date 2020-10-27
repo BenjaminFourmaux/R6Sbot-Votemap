@@ -59,20 +59,13 @@ La version stable actuelle 3.1
 - 4.2 (longtemps) "Tuto": Création d'une vidéo tutorielle afin d'expliquer comment utiliser le bot.
 - 4.1 (plus tard): Vérification s'il y a 2 équipes pour voter.
 - 4.0-min (bientôt) "TheLittleBigOne": version allégé de la v4.0 (sans log console et documentation du code).
-- 4.0 (bientôt) "TheBigOne": Refonte du coeur du bot:
+  
+--------------------------------------------------------------------------------------------------------------------
+- 4.0 "TheBigOne": Refonte du coeur du bot:
   - Implémentation du BAN-BAN PICK-PICK BAN-BAN.
   - Ajout de plusieurs test qui permet l'anti cheat (test si le ban à été lancé, si le joueur à bien une équipe ...).
   - Maintenant quand le ban est arrété (!vote stop) tous les roles ("Équipe Bleu" et "Équipe Orange") sont enlever de tous les joueurs.
   - Permet la flexibilité de l'app (pour faire des b01, b03, b05 par exemple).
   - Diverse corrections de bugs et optimisation du code.
-  
---------------------------------------------------------------------------------------------------------------------
-- 3.2 (instable): 
-  - Mise à jour des maps (map pool ESL).
-  - Le ban est désormé comforme aux règlés ESL (ban ban pick pick)(que je n'approuve pas!!)
-  - Le vote est arréte (!vote stop) que si une session ban à été lancé.
-  - Diverses optimisations du code
-- 3.1: Mise à jour des maps et de nouvelles reglès ESL.
-
 
 copyright Benjamin Fourmaux -- Beruet      Twitter: [@BFourmaux](https://www.twitter.com/BFourmaux)
