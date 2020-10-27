@@ -54,7 +54,7 @@ Pour afficher l'aide tapez: !vote help.
 
 # Notes de versions:
 
-La version stable actuelle 3.1
+La version stable actuelle 4.0
 ----------------------------------------------------------------------------------------------------------------------------
 - 4.2 (longtemps) "Tuto": Création d'une vidéo tutorielle afin d'expliquer comment utiliser le bot.
 - 4.1 (plus tard): Vérification s'il y a 2 équipes pour voter.
