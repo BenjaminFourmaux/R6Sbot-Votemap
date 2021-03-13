@@ -8,9 +8,9 @@
 console.log('Connexion à discordapp.com en cours...')
 const Discord = require('discord.js')
 const bot = new Discord.Client()
-bot.login('INSERT YOUR TOKEN') // token de connexion
+bot.login('INSERT YOUR TOKEN HERE') // token de connexion
 
-version = '4.0'; // Version du bot
+version = '4.1'; // Version du bot
 
 
 // Initialisation du bot
@@ -24,7 +24,7 @@ bot.on('ready', function () {
 // initialisation de la liste des maps
 var Maps =  new Map();
 Maps.set('1', "Club House");
-Maps.set('2', "Parc d'attractions");
+Maps.set('2', "Chalet");
 Maps.set('3', "Café Dostoyevsky");
 Maps.set('4', "Oregon");
 Maps.set('5', "Litoral");
